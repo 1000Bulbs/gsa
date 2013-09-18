@@ -9,7 +9,11 @@ describe GSA do
 
       it "successfully posts to the gsa" do
         VCR.use_cassette("many_records") do
-          results = GSA.direct_feed(:file_name => "out", :records => many_records, :searchable => [:name, :description], :datasource_name => "products")
+          results = GSA.direct_feed(
+            :file_name => "out", :records => many_records, 
+            :searchable => [:name, :description], 
+            :datasource_name => "products"
+          )
           results.should eq success_text
         end
       end
@@ -19,7 +23,12 @@ describe GSA do
 
       it "successfully posts to the gsa" do
         VCR.use_cassette("single_record") do
-          results = GSA.direct_feed(:file_name => "out", :records => one_records, :searchable => [:name, :description], :datasource_name => "products")
+          results = GSA.direct_feed(
+            :file_name => "out", 
+            :records => one_records, 
+            :searchable => [:name, :description], 
+            :datasource_name => "products"
+          )
           results.should eq success_text
         end
       end
