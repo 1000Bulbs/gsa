@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF8'?>
+<!DOCTYPE gsafeed PUBLIC '-//Google//DTD GSA Feeds//EN' ''>
+<gsafeed>
+<header>
+<datasource>
+products</datasource>
+<feedtype>
+incremental</feedtype>
+</header>
+<group>
+<record url='http://0.0.0.0:3000/products/1' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='1'/>
+<meta name='name' content='blue Incandescent bulb'/>
+<meta name='description' content='excellent and masterful blue bulb'/>
+<meta name='voltage' content='120'/>
+<meta name='brand' content='Bulbrite'/>
+<meta name='material' content='Plastic'/>
+<meta name='bulb_type' content='Incandescent'/>
+<meta name='bulb_color' content='blue'/>
+<meta name='price' content='71'/>
+</metadata>
+<content>
+ blue Incandescent bulb excellent and masterful blue bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/2' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='2'/>
+<meta name='name' content='white Incandescent bulb'/>
+<meta name='description' content='awe-inspiring and poignant white bulb'/>
+<meta name='voltage' content='220'/>
+<meta name='brand' content='Satco'/>
+<meta name='material' content='Brass'/>
+<meta name='bulb_type' content='Incandescent'/>
+<meta name='bulb_color' content='white'/>
+<meta name='price' content='41'/>
+</metadata>
+<content>
+ white Incandescent bulb awe-inspiring and poignant white bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/3' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='3'/>
+<meta name='name' content='blue Halogen bulb'/>
+<meta name='description' content='super and masterful blue bulb'/>
+<meta name='voltage' content='100'/>
+<meta name='brand' content='Eiko'/>
+<meta name='material' content='Plastic'/>
+<meta name='bulb_type' content='LED'/>
+<meta name='bulb_color' content='blue'/>
+<meta name='price' content='66'/>
+</metadata>
+<content>
+ blue Halogen bulb super and masterful blue bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/4' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='4'/>
+<meta name='name' content='yellow Incandescent bulb'/>
+<meta name='description' content='awesome and tasteful yellow bulb'/>
+<meta name='voltage' content='220'/>
+<meta name='brand' content='Plusrite'/>
+<meta name='material' content='Brass'/>
+<meta name='bulb_type' content='Incandescent'/>
+<meta name='bulb_color' content='yellow'/>
+<meta name='price' content='27'/>
+</metadata>
+<content>
+ yellow Incandescent bulb awesome and tasteful yellow bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/5' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='5'/>
+<meta name='name' content='green LED bulb'/>
+<meta name='description' content='amazing and unique green bulb'/>
+<meta name='voltage' content='135'/>
+<meta name='brand' content='Sylvania'/>
+<meta name='material' content='Fiberglass'/>
+<meta name='bulb_type' content='LED'/>
+<meta name='bulb_color' content='green'/>
+<meta name='price' content='95'/>
+</metadata>
+<content>
+ green LED bulb amazing and unique green bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/6' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='6'/>
+<meta name='name' content='yellow LED bulb'/>
+<meta name='description' content='awesome and unique yellow bulb'/>
+<meta name='voltage' content='65'/>
+<meta name='brand' content='Sylvania'/>
+<meta name='material' content='Resin'/>
+<meta name='bulb_type' content='LED'/>
+<meta name='bulb_color' content='yellow'/>
+<meta name='price' content='4'/>
+</metadata>
+<content>
+ yellow LED bulb awesome and unique yellow bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/7' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='7'/>
+<meta name='name' content='yellow LED bulb'/>
+<meta name='description' content='cheery and interesting yellow bulb'/>
+<meta name='voltage' content='135'/>
+<meta name='brand' content='Satco'/>
+<meta name='material' content='Fiberglass'/>
+<meta name='bulb_type' content='Incandescent'/>
+<meta name='bulb_color' content='yellow'/>
+<meta name='price' content='53'/>
+</metadata>
+<content>
+ yellow LED bulb cheery and interesting yellow bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/8' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='8'/>
+<meta name='name' content='yellow Incandescent bulb'/>
+<meta name='description' content='excellent and masterful yellow bulb'/>
+<meta name='voltage' content='45'/>
+<meta name='brand' content='Eiko'/>
+<meta name='material' content='Metal'/>
+<meta name='bulb_type' content='Incandescent'/>
+<meta name='bulb_color' content='yellow'/>
+<meta name='price' content='6'/>
+</metadata>
+<content>
+ yellow Incandescent bulb excellent and masterful yellow bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/9' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='9'/>
+<meta name='name' content='white Incandescent bulb'/>
+<meta name='description' content='super and haunting white bulb'/>
+<meta name='voltage' content='140'/>
+<meta name='brand' content='Plusrite'/>
+<meta name='material' content='Wood'/>
+<meta name='bulb_type' content='Incandescent'/>
+<meta name='bulb_color' content='white'/>
+<meta name='price' content='94'/>
+</metadata>
+<content>
+ white Incandescent bulb super and haunting white bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/10' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='10'/>
+<meta name='name' content='blue Incandescent bulb'/>
+<meta name='description' content='awesome and warm blue bulb'/>
+<meta name='voltage' content='45'/>
+<meta name='brand' content='Eiko'/>
+<meta name='material' content='Ceramic'/>
+<meta name='bulb_type' content='Halogen'/>
+<meta name='bulb_color' content='blue'/>
+<meta name='price' content='17'/>
+</metadata>
+<content>
+ blue Incandescent bulb awesome and warm blue bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/11' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='11'/>
+<meta name='name' content='black Incandescent bulb'/>
+<meta name='description' content='amazing and haunting black bulb'/>
+<meta name='voltage' content='45'/>
+<meta name='brand' content='Bulbrite'/>
+<meta name='material' content='Brass'/>
+<meta name='bulb_type' content='Halogen'/>
+<meta name='bulb_color' content='black'/>
+<meta name='price' content='63'/>
+</metadata>
+<content>
+ black Incandescent bulb amazing and haunting black bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/12' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='12'/>
+<meta name='name' content='white Halogen bulb'/>
+<meta name='description' content='awe-inspiring and heavenly white bulb'/>
+<meta name='voltage' content='45'/>
+<meta name='brand' content='Sylvania'/>
+<meta name='material' content='Fabric'/>
+<meta name='bulb_type' content='LED'/>
+<meta name='bulb_color' content='white'/>
+<meta name='price' content='85'/>
+</metadata>
+<content>
+ white Halogen bulb awe-inspiring and heavenly white bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/13' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='13'/>
+<meta name='name' content='blue Incandescent bulb'/>
+<meta name='description' content='super and unique blue bulb'/>
+<meta name='voltage' content='135'/>
+<meta name='brand' content='Satco'/>
+<meta name='material' content='Resin'/>
+<meta name='bulb_type' content='Flourescent'/>
+<meta name='bulb_color' content='blue'/>
+<meta name='price' content='19'/>
+</metadata>
+<content>
+ blue Incandescent bulb super and unique blue bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/14' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='14'/>
+<meta name='name' content='green Flourescent bulb'/>
+<meta name='description' content='super and special green bulb'/>
+<meta name='voltage' content='75'/>
+<meta name='brand' content='Plusrite'/>
+<meta name='material' content='Glass'/>
+<meta name='bulb_type' content='Halogen'/>
+<meta name='bulb_color' content='green'/>
+<meta name='price' content='59'/>
+</metadata>
+<content>
+ green Flourescent bulb super and special green bulb</content>
+</record>
+<record url='http://0.0.0.0:3000/products/15' mimetype='text/plain'>
+<metadata>
+<meta name='id' content='15'/>
+<meta name='name' content='white Incandescent bulb'/>
+<meta name='description' content='cool and unique white bulb'/>
+<meta name='voltage' content='135'/>
+<meta name='brand' content='Sylvania'/>
+<meta name='material' content='Ceramic'/>
+<meta name='bulb_type' content='Flourescent'/>
+<meta name='bulb_color' content='white'/>
+<meta name='price' content='79'/>
+</metadata>
+<content>
+ white Incandescent bulb cool and unique white bulb</content>
+</record>
+</group>
+</gsafeed>
