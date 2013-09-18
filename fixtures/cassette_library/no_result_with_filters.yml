@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:FooBar&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 13:58:31 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '385'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAG2TUW+CMBDH3/0UTR980Aioc9EJGJfMZQ/LVNxeTYGTNKkt
+        lmL8+KtsArYmPPR6/9//aHvnLy5Hhs4gCyp4gIeOhxHwRKSUZwH+iL4G0+lk
+        NhhiVCjCU8IEhwBzgRdhx3+P1ujnbRvgsTPCOt59hp7jPU2mo2ff1YG/CeGS
+        AGPAFYpZCSguWey7G61dL7fLT8TJUdudMDoTnQ7wAzlGQtKMcsL2pqh/FfUr
+        kWtYHihTIGtfz3bxLCYDdaDA0qLGejbWs7BCSFUTEhicCU/AJpuU6cDLY20w
+        9LwHP1vtmpgoVV42pfVD7rnYpyq1+VbOdJFwKqmE1Dh6LPVzv6yEeCXS9rvL
+        mo4Uapfv3WowtfG/bZMrGeFZjdqUXShvXZsz0t9k7Exmj66vlTVdSJJA0Rw8
+        t/G8YqJcd50ei9CPyiyDQumJQaf7noVb07Yav8vUPO5man5d0Oui0l0jl972
+        3UrxPx+Nf6iDuqyr5y3s/AJcvyIHsgMAAA==
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 13:57:25 GMT
+recorded_with: VCR 2.5.0

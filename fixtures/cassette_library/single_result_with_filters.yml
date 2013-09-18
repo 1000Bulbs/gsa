@@ -1,0 +1,185 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Fiberglass&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 13:42:33 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '401'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAIWTz2+CMBTH7/4VTQ8eNALqSPwBGA9z2WGZitvVFHiyJqVg
+        W4x//iqb6FqTJRz6+r6f7yuvfcHiXDB0AiFpyUM8dDyMgKdlRnke4tf4fTCZ
+        +NPBECOpCM8IKzmEmJd4EXWCl3iNPp+3IR47I6zj3VvkOd7T1PNHgauDYBPB
+        OQXGgCuUsBpQUrMkcDdau15ul2+Ik0LbHTE6EZ0O8QM5RqWgOeWE7U1R/yLq
+        NyLXsDxQpkC0vp7t4llMDupAgWWyxXo21rMwWQrVEgIYnAhPwSZvKdOB10Vr
+        MPS8B4dtdk2srFVV30rri9zzcp+pzObvcqaLgGNNBWTGrydCX/ds/UUZraRT
+        EN1NSthsRRMQOSNS2kX+R8zaFNp6H7vVYGJ7/mybXM0Iz1vUpuxC1V2DnZH+
+        /LHjTx81+i5rupA0BXlrUWXjVcPElX6feoCiIK7zHKTSs4WOf183XJ/33Yh0
+        mZon3VzNLwt6WTS6S+TS677bKH4n6eYf6aAt6+rJjDrfZB3iY9wDAAA=
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 13:41:27 GMT
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Glass&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 13:43:03 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '863'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAM1WUXObOBB+76/Q6KEP7djCJrZTV1bHdYmbNE5TwO1dXzwY
+        FKI7RRAQae7f3wI2EHCb5Obm5sYZW9r9vtVqtZ8U+u7+RqI7nqQiUjM86BsY
+        ceVHgVDhDJ86n3vHx6M3vQFGqfZU4MlI8RlWEX7HXtClc4m+WvYMm/0hhrm7
+        YkbfME1jPKEEJvQL4/c+l5IrjbYy42ibyS0lXwB7ObfnK6S8Gwh3i9GdB+4Z
+        PgDHKEpEKJQnN23Q6xz0ugCRVsgrITVPqrhGN4rR4YRcXwkug7SiverSXnVo
+        aZToipFwye885fMus3a1I6jspgowMIwDyRbWNi3KdJzVS8NBblS0CXTQ5Td8
+        7SgJv81EwoPW1rcJHPf08lpIEaf9Gw+qKTw5XUovTbvxf4luryh4tcraPekd
+        d8OV5jYvk54KK2qX1V0obpS1P4S/kdkfvTlU3oa3HcXzfZ7WhYm79LjgODF0
+        JciGUScLQ55qUBS6fdjTfN/UDWG8lPrt9mWo3+YDkQ8KXD4jYm8nBWKnnzo+
+        g0m1rG05yLmA3WBkwU8hyRUbUrKCwW9unqONSv/qdGXNsOb3msTSEwozumbX
+        WsdTQkDC+WdqQs+ROImCzNcpGQ/GlKwBZj0FZzHqNrYIzYGuvUxpyLN5EbiQ
+        9Cc2ogS+6cKefzv/MHctNpggh8doaAxMSmoztS7cjfN5bS8s5h715mfjkX2+
+        PFp9P3NsShpOunLzfQoQwtcZhozgfHa2/EgLa5HFR7jPQq7Q7grZYQKe+omI
+        8/oW0Mf2UTPvIqm9sFxgMqrthTwK604itWuvlcK718ueBsE3+q+4DHiqfIgC
+        uUEmLYwfySiptlU740T4JXk4qa1+wmHRYOPp0gVl7hlwx4/RYDIdHk+PRmjt
+        Lmp8FgdPxDusauY8kUbj7itd+yFvVFW2gXxQ4wfhimI3kND7jJ7PL5aMK0qK
+        Af04z22QygI536HV/8Rocfphht9fyezi9x8n75dHZ7k8Fg8eN8CTgklsVmpk
+        +E80Ai/fkzRS4g5oJI25D73wn0sEEvqZRE5klCVl0z1LJp2tHFbJwDD+TzIx
+        nyMT85kyMR+XSbPaT5PKvs7/mlLczb3YfPtjmcx/PKYUAi8OPCoE/g9kL/4G
+        wwtrqkoKAAA=
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 13:41:58 GMT
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Brass&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 13:43:15 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '769'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI1VXVOjMBR991dk8uCDThvoh9aa4nQrW3XFD6C640uHQsTM
+        pgEhuO6/3wttAcFxnLY0ufeck5ubewM9e18L9MaSlEdygvWuhhGTfhRwGU7w
+        pXPbGY2GJx0do1R5MvBEJNkEywifGXt07tyhB9Oe4H63h2HuWobW1YbH/UGf
+        EpjQe4O9+0wIJhVaiYyhVSZWlNwD9m5qTy0kvTXIvWL05oF7gj+BYxQlPOTS
+        E8sm6DAHHRYg0pB85kKxpNTV2ipaixMy9cyZCNKSdtCmHbRoaZSokpEwwd48
+        6bM2s3I1FWS2LgV0Tfsk2MLapEWZirNqaTjIpYyWgQra/JqvqZKw14wnLGhs
+        fZXAcY/vXrjgcdpde5BN7onxj8RL07b+l+jmipyVqyzcn51RW25jbvIy4cmw
+        pLZZ7YXiWlq7PfgO+93hyWfprXmbKp7vs7RKTNymxwXHiaEqoW0M6mRhyFIF
+        HYVeP9Y02xV1rTH2hTpd7YfqNB/wfFDg8hnhOzspENv+qfQNmJTL2qaDnBvY
+        DUZm8QdBWYZOiQWD324eo402fuvSMidYsXdFYuFxiQ26MF6UiseEQAvnn3Ef
+        ao7ESRRkvkrJ4HhIyQJg5ndwpkHd2hahOFAm+Wu+++oacCHkXwbA4Uln9vTx
+        +nzqmoZ+jBwWo56mwy1Smal54y6d24U9Mw130JleHQ3t6/nAerpybEpqTmq5
+        +S45tMHDBEM8cDpbW36ghbWI4gJus5BJtL1AtpiApX7C4zy7BfTrXVS8t0go
+        L9zI67pWOYreKMzb/qhcu0YpvLtm2dFAfan+xRvFS+mDCoQGgTQwfiSipNxV
+        5YwT7m/Ig1Fl9RMGiwZLTxWuPMsdDS74I6Qfj3uj8WCAFu6swmdx8E28Y5SV
+        nAdSq9pdois/xI3KxNaQtRR/ECtyXcNB2Rv0enozN5ikpBjQi2lug0BmyHmC
+        M/iD0ezyfIKtuZj7/cfz7OnvVd4Zsw/vNcCTgkns/Gc60CUEXmzG3n8321W+
+        GwcAAA==
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 13:42:10 GMT
+recorded_with: VCR 2.5.0

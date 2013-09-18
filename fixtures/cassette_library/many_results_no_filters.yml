@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 12:34:39 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1871'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        5nXzI0KIvqLKXySiq17JX/4DijtgG/E+AAA=
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 12:33:35 GMT
+recorded_with: VCR 2.5.0

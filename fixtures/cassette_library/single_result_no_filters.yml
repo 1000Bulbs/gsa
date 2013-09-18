@@ -1,0 +1,483 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20bulb&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 12:25:30 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '6899'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        69WjP/4LTyz7sk5lAQA=
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 12:24:26 GMT
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 12:28:10 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1871'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        87r5ESFEX1HlLxLRVa/kL/8Bt7USx/E+AAA=
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 12:27:07 GMT
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20Incandescent%20bulb%20excellent%20and%20haunting&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 12:40:09 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '906'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAM2XW3ObOhDH3/spNDz0oR5b+IIvqayO6xDHqUlTwL3kxYOx
+        4jCVgYBIc779WYEL1NgTu52c00kmRrv7X62W/YFD3j1tOHpkUewF/lBpNlQF
+        Md8NVp6/HipT62O939cG9aaCYuH4K4cHPhsqfqC8o6/IxLpBn3VzqLQbLQXW
+        tkHVhtpWe4M+wbAgn+iSJwxNfRe0LHaZL9Ay4UvEnlzGuVyCA907iS9gQ4I/
+        QZabkTkykO9sYKMHBT06kGKonJRIQUHkrT3f4YuSvFaW16S8lstr4KjlcrxT
+        xp3HBYvyWtRqfrWiWTNx5zG+inPZm6rsTUUWB5HIFRHj7NHxXVZVFq7dDH6y
+        yRM0VXVPsal1VxYkIkyKrWEsFn6wWIlVVV/y7WbxWJ5hbl/U+1VxZt7VJdyR
+        t20bU1VVNwpLh2y04FdrN7TBvsOWvLtZHNdlcXGHwqo8TDVWCGMCk0GJlazX
+        LBZAC3o4diq3U3UcDK+5eLt8vRZv5YUnL7Z6ucbeTw9OYwgu6qGwyMs0dQtZ
+        13B6Benw0ZZ4GrRNsAEXX215JhNlfmNq6ENFsCeBQ+54vkLJnN4LEZ5hDDjL
+        n7M2TAwOo2CVuCLG7d6A4DmE6cfE6ZTYdD+nKO2IbAI8L6DoD7RLMPwlY3P0
+        ZXY+snXa7CGLhailNqH4wkz0a3thfZybY53anfroqquZs0nHuL2yTIJLTmLY
+        8pwejPFn6ENPzsDWJkcgte6/L0WgtEZeKJucxj93mEL5GHDhrLNdWi21cCwj
+        kKbmG57EkSdY4ds48LDxHJ66L5xl5LklIeRfiH/CLOcFD5Ioq3knxA14EOWn
+        K5whZNvW0ymsbsRg09XCEZkLul1X4bHfRc3eWat/1umguT0u4pNwdWS8RfOB
+        fm78i7H+FYRqg0uRMPSUzEbXE8p8gtMLcjmSNth8jKxbmPHvChpPz6FbX682
+        l+HtRL0xriQX41/ecBCPUyU2aQZH63fg6Da7R8GRxZ0Eh/aycEBFh+C4hBf/
+        mvkvwkVP24vFvce9MD5AxYQ7cXwIivKInU5F7wQqtBOp0A5QUZrnn50u/P8t
+        I+/veHL97cfF+0nnKEbav8NIr6sdxUgW9zcxAhUdYmSmn78IH539fPzJa+OP
+        COkMTiCkeyIh3ecJkX3+v+iYzm55exx8ebj/9hwdGL6CwbcsDP8k0Vf/Avca
+        lDxnDQAA
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 12:39:05 GMT
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20Incandescent%20bulb%20excellent%20and%20haunting%20blue%20bulb&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 12:41:16 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '923'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAM2X33OiSBDH3/evmOJhH9ZSUESSLM6Wa4gxK9ks4P7Ii4U4
+        IdSNA4Ehl/vvrwc2wImWmq3sXiUVme7+ds+0/QFifHhaU/RIkjSM2FDqdhQJ
+        EeZHq5AFQ2nqfG6fnGin7a6EUu6xlUcjRoYSi6QP+I0xcW7QV9MeSmqnJ8Ha
+        tbDSUXq6pqqGDAvjC17SjKAp80FLUp8wjpYZXSLy5BNKxRIc6N7LGIeCKI8W
+        AYb8BfLdjOyRhZi3hpIPEnr0wD2UXphSQlESBiHz6KKWqFVP1BJxrTJRCxyt
+        50StPDpPJG9s7S6knCTl/pRmJaWhCQi/CwldpaXsXVP2riFLo4SXioRQ8ugx
+        nzSVlWszA8vWZYKuomzZbG7dlEUZj7OqNAzNgkWLFV819TXfZpaQlBnm7kX7
+        pCkuzJu6jHosKKVNVbNQXDtkpwe/mtrRTrcdtubdzOL5PkmrbyhuyuNc48Qw
+        MDAj2HCyICApB5bQw2GT6tVHlTzP6n5u3lL+fvk24O/FRSguRDKxkMNns5wH
+        VAWamrzkVlFBYXUeDIvymLbpIOcauichEz5UAb+FAXoLLr67oic2KvzW1DKH
+        EidPXI6pFzIJG3N8z3l8JstwsxA/ZypMnBwn0SrzeSqr+qkhzyHMPCTOxIaL
+        999OXNj0J6wbMvw1xvbo2+x85Jq4qyOHxKindGHzldkwr92F83luj03s9tuj
+        q4FmzyZ96/bKsQ255jQsV5wzBAy+Qh90MUM/bWKEcuv2r7IKFNYkjEWT8/i9
+        N7JS+RhR7gVFlV5PqRzLBKS5+YZmaRJyUvnWHtysQo/m7gtvmYR+TQj5F/yf
+        uMh5QaMsKfa8EeJHNErK01XOGLL93E+/svoJgaKrhccLF3S7rcBDZYC6+lnv
+        5KzfR3N3XMVn8erAeAeXM72PmNpsi76WumaDa5Ew9NiYja4nmDBDzi+My5Gw
+        QfExcm5hxv+S0Hh6Dt36frW+jG8nyo11JbgY/+f5CfFyrpRtXMDRewkcg+7g
+        IDiKuKPgGLwuHLCjXXBcwmtFQNircKFrW7G4D2kYpzuomFAvTXdBUR+x46nQ
+        j6BCO5IKbQcVtXl+7nTl/72MfLyj2fWPvy8+TvoHMaK+hBF9oB3ESBH3f2IE
+        drSLkZl5/ip89Lfz8SuPjV8ipH96BCGDIwkZ7CdE9PlP0TGd3VJ1HH17uP+x
+        jw4ZXsHgLUuGf8Hwm38BuDZq+sUNAAA=
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 12:40:12 GMT
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=amazing%20and%20heavenly%20red%20bulb&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Sep 2013 12:44:07 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '743'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI1V33OiMBB+v78iw0Mf6mhQsVob6XCW69mT/gDs3fTFiZBa
+        5mKgEJz2/vrboIKVXq+jYrL7fbubzZdAzl9WHK1ZmkWxGGntlq4hJoI4jMRy
+        pE28m+Zg0DtttjWUSSpCymPBRpqItXPzC7n0btG97Y60bqujwdx3TL2lGwPD
+        MAiGCbkz6Yr+gVAIuOiJ0TUT/BWlLESLnC8IvgPWreVaDhJ0BYGfNbSmPIfR
+        h0QNxWm0jATl87fwBsAbO3gD4I0Cjg/SPEZcsrTMpdfj6TXOksnHiPEwK2nH
+        ddpxjZbFqSwZKeNsTUXA6szKdRhB5KsyQFvX3ym2sB7S4lwmeZUatnku4nko
+        wzp/z3cYJWJlhJn/rTmokzfmQ17OqViW1DqrnijZW2SrA99et9U7fW+xe97D
+        KDQIWFbtUFKnJwXHSxjnoBeTePlyyTIJ6kfP/1Id3cnufTkfcXm2OFrKMzWI
+        1EAx1ARHOzMuAFvVVzlNmJSluLaHvGtYoYbs4g8Kdcw2wQ4Mfvmqbhdt/M7E
+        sUeaZC8SJ5xGQjPJzHySMhliDEdQfYZdUAVO0jjMA5lhY6ATPAOY/RmcbRL/
+        f2fXh4p/mH2C4UnGrvVzemH5ttnuI48lqKO3uwRXZmJf+3PvZuaObdM3mtbV
+        Sc+dXhrOw5XnErznJI6vFhmBTu9HGpQDG7a1qT0urKqIiQigMJYFTEi0PeVb
+        nLKmUaIaXMA/vktK2jrmki43Gfq9yr5IgVhYvwI+jSSrfCsKF0lEeeF2WQZb
+        UfEAPZevySbifr0HmCDmcbpbWOVL0ijYcHsnlTVIGeQM51QWLtXnpg439Alq
+        94edwdAw0MwfV/g8CT+J98xSyelWvxvVvml1iVGlo21r98CqySWm1u09IEjf
+        JFPr+tJkguBiQL5byga1jJH3AEr/raHx5GKkPSWd6Xpmzfu3+pU6HeM37ybA
+        44KJXfWzPTgpGF5O5pe/Ec/w1N8GAAA=
+    http_version: 
+  recorded_at: Wed, 18 Sep 2013 12:43:03 GMT
+recorded_with: VCR 2.5.0

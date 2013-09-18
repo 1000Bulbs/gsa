@@ -1,0 +1,1 @@
+[:voltage, :brand, :material, :bulb_type, :bulb_color]

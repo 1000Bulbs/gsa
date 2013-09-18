@@ -1,0 +1,1 @@
+{"id"=>1, "name"=>"blue Incandescent bulb", "description"=>"excellent and masterful blue bulb", "voltage"=>"120", "brand"=>"Bulbrite", "material"=>"Plastic", "bulb_type"=>"Incandescent", "bulb_color"=>"blue", "price"=>71}
