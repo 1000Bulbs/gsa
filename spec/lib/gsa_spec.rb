@@ -3,7 +3,7 @@ require 'spec_helper'
 describe GSA do
   include Fixtures
 
-  before(:all) do
+  before(:each) do
     GSA.base_uri = gsa_base_uri
   end
 
@@ -79,6 +79,29 @@ describe GSA do
             results.should eq success_text
           end
         end
+      end
+    end
+
+    context "without a base_uri set" do
+
+      before(:each) do
+        GSA.base_uri = nil
+      end
+
+      it "raises an error" do
+        expect { 
+
+          GSA.direct_feed(
+            :file_name       => "out", 
+            :records         => one_records, 
+            :searchable      => [:name, :description], 
+            :datasource_name => "products",
+            :datasource_uri  => "http://0.0.0.0:3000/products",
+            :datasource_uid  => "id",
+            :delete?         => true
+          ) 
+          
+        }.to raise_error GSA::URINotSetError
       end
     end
   end
@@ -218,6 +241,24 @@ describe GSA do
             results = GSA.pretty_search(query, :filters => filters)
             results.should eq GSA::NO_RESULTS
           end
+        end
+      end
+
+      context "without a base_uri set" do
+
+        let(:query)   { many_query }
+        let(:filters) { "brand:Philips" }
+
+        before(:each) do
+          GSA.base_uri = nil
+        end
+
+        it "raises an error" do
+          expect { 
+
+            GSA.pretty_search(query, :filters => filters) 
+
+          }.to raise_error GSA::URINotSetError
         end
       end
     end
