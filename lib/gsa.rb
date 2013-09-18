@@ -43,6 +43,10 @@ module GSA
   # feed url
   FEED_URL               = "#{BASE_URI}:19900/xmlfeed"
 
+  # feed actions
+  ADD_ACTION             = "add"
+  DELETE_ACTION          = "delete"
+
   # values for making xml files
   DOC_TYPE               = "<!DOCTYPE gsafeed PUBLIC '-//Google//DTD GSA Feeds//EN' ''>"
   XML_TYPE               = "<?xml version='1.0' encoding='UTF8'?>"

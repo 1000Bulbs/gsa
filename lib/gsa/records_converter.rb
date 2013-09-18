@@ -9,25 +9,29 @@ module GSA
       file_name       = args[:file_name]
       searchable      = args[:searchable]
       datasource_name = args[:datasource_name]
+      action          = args[:delete?] ? GSA::DELETE_ACTION : GSA::ADD_ACTION
 
       # if there is only one record, convert to the expected array.
       records = [records] if records.is_a? Hash
 
-      build_xml_file(file_name, layout(records, searchable, datasource_name))
+      build_xml_file(file_name, layout(records, searchable, datasource_name, action))
     end
 
     #######
     private
     #######
 
-    def self.layout(records, searchable, datasource_name)
+    def self.layout(records, searchable, datasource_name, action)
       xml(
         block(:gsafeed,
               block(:header,
                     block(:datasource, datasource_name) << 
                     block(:feedtype, GSA::FEED_TYPE)
               ) <<
-              block(:group, record_blocks(records, searchable))
+              block(:group, 
+                record_blocks(records, searchable), 
+                {:action => action}
+              )
         )
       )
     end

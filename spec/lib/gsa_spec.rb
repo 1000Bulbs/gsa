@@ -5,31 +5,68 @@ describe GSA do
 
   describe "#direct_feed" do
 
-    context "with many records" do
+    context "add" do
 
-      it "successfully posts to the gsa" do
-        VCR.use_cassette("many_records") do
-          results = GSA.direct_feed(
-            :file_name => "out", :records => many_records, 
-            :searchable => [:name, :description], 
-            :datasource_name => "products"
-          )
-          results.should eq success_text
+      context "many records" do
+
+        it "successfully adds the records to the gsa index" do
+          VCR.use_cassette("many_records") do
+            results = GSA.direct_feed(
+              :file_name => "out", :records => many_records, 
+              :searchable => [:name, :description], 
+              :datasource_name => "products"
+            )
+            results.should eq success_text
+          end
+        end
+      end
+
+      context "a single record" do
+
+        it "successfully adds the records to the gsa index" do
+          VCR.use_cassette("single_record") do
+            results = GSA.direct_feed(
+              :file_name => "out", 
+              :records => one_records, 
+              :searchable => [:name, :description], 
+              :datasource_name => "products"
+            )
+            results.should eq success_text
+          end
         end
       end
     end
 
-    context "with a single record" do
+    context "delete" do
 
-      it "successfully posts to the gsa" do
-        VCR.use_cassette("single_record") do
-          results = GSA.direct_feed(
-            :file_name => "out", 
-            :records => one_records, 
-            :searchable => [:name, :description], 
-            :datasource_name => "products"
-          )
-          results.should eq success_text
+      context "many records" do
+
+        it "successfully deletes the records from the gsa index" do
+          VCR.use_cassette("delete_many_records") do
+            results = GSA.direct_feed(
+              :file_name => "out", :records => many_records, 
+              :searchable => [:name, :description], 
+              :datasource_name => "products",
+              :delete? => true
+            )
+            results.should eq success_text
+          end
+        end
+      end
+
+      context "a single record" do
+
+        it "successfully deletes the record from the gsa index" do
+          VCR.use_cassette("delete_single_record") do
+            results = GSA.direct_feed(
+              :file_name => "out", 
+              :records => one_records, 
+              :searchable => [:name, :description], 
+              :datasource_name => "products",
+              :delete? => true
+            )
+            results.should eq success_text
+          end
         end
       end
     end
