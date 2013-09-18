@@ -1,4 +1,7 @@
 module Defaults
+  # remember to set your base uri :)
+  NO_URI_TEXT            = "base_uri not set"
+
   # feed extension
   FEED_EXTENSION         = ":19900/xmlfeed"
   

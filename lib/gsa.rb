@@ -11,6 +11,7 @@ require_relative 'gsa/searcher'
 require_relative 'gsa/faceter'
 require_relative 'gsa/search_converter'
 require_relative 'gsa/uid_extractor'
+require_relative 'gsa/exceptions'
 
 require_relative 'defaults'
 require_relative 'facade'
@@ -18,10 +19,6 @@ require_relative 'facade'
 module GSA
   class << self
     attr_accessor :base_uri
-
-    def base_uri
-      @base_uri || "http://dev-gsa.1000bulbs.com"
-    end
   end
 
   include Defaults

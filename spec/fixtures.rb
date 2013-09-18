@@ -59,6 +59,10 @@ module Fixtures
     "id"
   end
 
+  def gsa_base_uri
+    "http://dev-gsa.1000bulbs.com"
+  end
+
   #######
   private
   #######

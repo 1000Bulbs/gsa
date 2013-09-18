@@ -23,11 +23,19 @@ module Facade
   #########
 
   def feed(xml_file, datasource_name)
-    GSA::Feeder.feed(xml_file, datasource_name)
+    if GSA.base_uri
+      GSA::Feeder.feed(xml_file, datasource_name)
+    else
+      raise GSA::URINotSetError, GSA::NO_URI_TEXT
+    end
   end
 
   def search(query, filters={})
-    GSA::Searcher.search(query, filters)
+    if GSA.base_uri
+      GSA::Searcher.search(query, filters)
+    else
+      raise GSA::URINotSetError, GSA::NO_URI_TEXT
+    end
   end
 
   def pretty_search_results(search_results)

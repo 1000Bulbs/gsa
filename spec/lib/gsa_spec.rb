@@ -3,6 +3,10 @@ require 'spec_helper'
 describe GSA do
   include Fixtures
 
+  before(:all) do
+    GSA.base_uri = gsa_base_uri
+  end
+
   describe "#direct_feed" do
 
     context "add" do
