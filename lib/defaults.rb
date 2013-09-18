@@ -1,8 +1,7 @@
 module Defaults
-
-  # feed url
-  FEED_URL               = "#{GSA.base_uri}:19900/xmlfeed"
-
+  # feed extension
+  FEED_EXTENSION         = ":19900/xmlfeed"
+  
   # feed actions
   ADD_ACTION             = "add"
   DELETE_ACTION          = "delete"

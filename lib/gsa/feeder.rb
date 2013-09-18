@@ -7,7 +7,7 @@ module GSA
       file = open_file(file_name)
 
       RestClient.post(
-        GSA::FEED_URL, 
+        "#{GSA.base_uri}#{GSA::FEED_EXTENSION}", 
         {
           :feedtype   => GSA::FEED_TYPE, 
           :datasource => datasource_name, 
