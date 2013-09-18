@@ -9,7 +9,7 @@ module GSA
       output          = args[:output]    || GSA::DEFAULT_OUTPUT
       requiredfields  = args[:filters]   || nil
 
-      search = "#{GSA::BASE_URI}/search?q=#{query}&filter=#{filter}&getfields=#{getfields}&sort=#{sort}&num=#{num}&output=#{output}"
+      search = "#{GSA.base_uri}/search?q=#{query}&filter=#{filter}&getfields=#{getfields}&sort=#{sort}&num=#{num}&output=#{output}"
       search = "#{search}&requiredfields=#{clean_query(requiredfields)}" if requiredfields
 
       search_results = parsed_json( RestClient.get(search) )

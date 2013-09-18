@@ -55,6 +55,10 @@ module Fixtures
     "Success"
   end
 
+  def uid
+    "id"
+  end
+
   #######
   private
   #######

@@ -12,9 +12,11 @@ describe GSA do
         it "successfully adds the records to the gsa index" do
           VCR.use_cassette("many_records") do
             results = GSA.direct_feed(
-              :file_name => "out", :records => many_records, 
-              :searchable => [:name, :description], 
-              :datasource_name => "products"
+              :file_name       => "out", :records => many_records, 
+              :searchable      => [:name, :description], 
+              :datasource_name => "products",
+              :datasource_uri  => "http://0.0.0.0:3000/products",
+              :datasource_uid  => "id"
             )
             results.should eq success_text
           end
@@ -26,10 +28,11 @@ describe GSA do
         it "successfully adds the records to the gsa index" do
           VCR.use_cassette("single_record") do
             results = GSA.direct_feed(
-              :file_name => "out", 
-              :records => one_records, 
-              :searchable => [:name, :description], 
-              :datasource_name => "products"
+              :file_name       => "out", :records => many_records, 
+              :searchable      => [:name, :description], 
+              :datasource_name => "products",
+              :datasource_uri  => "http://0.0.0.0:3000/products",
+              :datasource_uid  => "id"
             )
             results.should eq success_text
           end
@@ -44,10 +47,12 @@ describe GSA do
         it "successfully deletes the records from the gsa index" do
           VCR.use_cassette("delete_many_records") do
             results = GSA.direct_feed(
-              :file_name => "out", :records => many_records, 
-              :searchable => [:name, :description], 
+              :file_name       => "out", :records => many_records, 
+              :searchable      => [:name, :description], 
               :datasource_name => "products",
-              :delete? => true
+              :datasource_uri  => "http://0.0.0.0:3000/products",
+              :datasource_uid  => "id",
+              :delete?         => true
             )
             results.should eq success_text
           end
@@ -59,11 +64,13 @@ describe GSA do
         it "successfully deletes the record from the gsa index" do
           VCR.use_cassette("delete_single_record") do
             results = GSA.direct_feed(
-              :file_name => "out", 
-              :records => one_records, 
-              :searchable => [:name, :description], 
+              :file_name       => "out", 
+              :records         => one_records, 
+              :searchable      => [:name, :description], 
               :datasource_name => "products",
-              :delete? => true
+              :datasource_uri  => "http://0.0.0.0:3000/products",
+              :datasource_uid  => "id",
+              :delete?         => true
             )
             results.should eq success_text
           end
@@ -159,8 +166,8 @@ describe GSA do
               }
             }
 
-            result_uids   = GSA.uids_from_pretty_search(results)
-            filtered_uids = GSA.uids_from_pretty_search(filtered_results)
+            result_uids   = GSA.uids_from_pretty_search(results, uid)
+            filtered_uids = GSA.uids_from_pretty_search(filtered_results, uid)
             result_uids.should eq filtered_uids
           end
         end
@@ -247,7 +254,7 @@ describe GSA do
       let(:uids)        { many_uids }
 
       it "returns multiple uids" do
-        results = GSA.uids_from_pretty_search(results_set)
+        results = GSA.uids_from_pretty_search(results_set, uid)
         results.should eq uids
       end
     end
@@ -258,7 +265,7 @@ describe GSA do
       let(:uids)        { one_uids }
 
       it "returns a single uid" do
-        results = GSA.uids_from_pretty_search(results_set)
+        results = GSA.uids_from_pretty_search(results_set, uid)
         results.should eq uids
       end
     end
