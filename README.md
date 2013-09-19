@@ -1,3 +1,3 @@
-## GSA Library
+## GSA Ruby Gem
 * Work in progress.
-* Soon to become a ruby gem.
+* Documentation coming tomorrow (09/20/2013)
