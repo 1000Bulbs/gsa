@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency 'rest-client', '~> 1.6.7'
-  s.add_runtime_dependency 'activesuppoert', '~> 4.0.0'
+  s.add_runtime_dependency 'activesupport', '~> 4.0.0'
   s.add_runtime_dependency 'json', '~> 1.8.0'
 
   s.add_development_dependency 'webmock', '~> 1.13.0'
