@@ -6,7 +6,7 @@ require 'gsa/version'
 Gem::Specification.new do |spec|
   spec.name          = 'gsa'
   spec.version       = GSA::VERSION
-  spec.authors       = ['1000Bulbs.com']
+  spec.authors       = ['Daniel J. Long', '1000Bulbs.com Dev Team']
   spec.email         = ['dlong@1000bulbs.com']
 
   spec.summary       = %q{
