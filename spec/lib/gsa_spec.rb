@@ -7,7 +7,7 @@ describe GSA do
     GSA.base_uri = gsa_base_uri
   end
 
-  describe "#direct_feed" do
+  describe "#feed" do
 
     context "add" do
 
@@ -15,7 +15,7 @@ describe GSA do
 
         it "successfully adds the records to the gsa index" do
           VCR.use_cassette("many_records") do
-            results = GSA.direct_feed(
+            results = GSA.feed(
               :file_name       => "out", :records => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
@@ -31,7 +31,7 @@ describe GSA do
 
         it "successfully adds the records to the gsa index" do
           VCR.use_cassette("single_record") do
-            results = GSA.direct_feed(
+            results = GSA.feed(
               :file_name       => "out", :records => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
@@ -50,7 +50,7 @@ describe GSA do
 
         it "successfully deletes the records from the gsa index" do
           VCR.use_cassette("delete_many_records") do
-            results = GSA.direct_feed(
+            results = GSA.feed(
               :file_name       => "out", :records => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
@@ -67,7 +67,7 @@ describe GSA do
 
         it "successfully deletes the record from the gsa index" do
           VCR.use_cassette("delete_single_record") do
-            results = GSA.direct_feed(
+            results = GSA.feed(
               :file_name       => "out", 
               :records         => one_records, 
               :searchable      => [:name, :description], 
@@ -91,7 +91,7 @@ describe GSA do
       it "raises an error" do
         expect { 
 
-          GSA.direct_feed(
+          GSA.feed(
             :file_name       => "out", 
             :records         => one_records, 
             :searchable      => [:name, :description], 
@@ -106,7 +106,7 @@ describe GSA do
     end
   end
 
-  describe "#pretty_search" do
+  describe "#search" do
 
     context "with no filters" do
 
@@ -117,14 +117,14 @@ describe GSA do
 
         it "returns many records" do
           VCR.use_cassette("many_results_no_filters") do
-            results = GSA.pretty_search(query)
+            results = GSA.search(query)
             results.count.should eq results_set.count
           end
         end
 
         it "returns results in the expected 'pretty' format" do
           VCR.use_cassette("many_results_no_filters") do
-            results = GSA.pretty_search(query)
+            results = GSA.search(query)
             results.should eq results_set
           end
         end
@@ -137,14 +137,14 @@ describe GSA do
 
         it "returns a single record" do
           VCR.use_cassette("single_result_no_filters") do
-            results = GSA.pretty_search(query)
+            results = GSA.search(query)
             results.count.should eq 1
           end
         end
 
         it "returns the single result in the expected 'pretty' format" do
           VCR.use_cassette("single_result_no_filters") do
-            results = GSA.pretty_search(query)
+            results = GSA.search(query)
             results.should eq result_set
           end
         end
@@ -156,7 +156,7 @@ describe GSA do
 
         it "returns the no record flag" do
           VCR.use_cassette("no_result_no_filters") do
-            results = GSA.pretty_search(query)
+            results = GSA.search(query)
             results.should eq GSA::NO_RESULTS
           end
         end
@@ -175,14 +175,14 @@ describe GSA do
 
         it "returns less than the unfiltered results" do
           VCR.use_cassette("many_results_with_filters") do
-            results = GSA.pretty_search(query, :filters => filters)
+            results = GSA.search(query, :filters => filters)
             results.count.should be < results_set.count
           end
         end
 
         it "should only contain results matched in the unfiltered results" do
           VCR.use_cassette("many_results_with_filters") do
-            results = GSA.pretty_search(query, :filters => filters)
+            results = GSA.search(query, :filters => filters)
 
             filtered_results = []
             results_set.each {|result| 
@@ -193,8 +193,8 @@ describe GSA do
               }
             }
 
-            result_uids   = GSA.uids_from_pretty_search(results, uid)
-            filtered_uids = GSA.uids_from_pretty_search(filtered_results, uid)
+            result_uids   = GSA.uids(results, uid)
+            filtered_uids = GSA.uids(filtered_results, uid)
             result_uids.should eq filtered_uids
           end
         end
@@ -212,14 +212,14 @@ describe GSA do
 
         it "returns a single filtered result" do
           VCR.use_cassette("single_result_with_filters") do
-            results = GSA.pretty_search(query, :filters => filters)
+            results = GSA.search(query, :filters => filters)
             results.count.should eq 1
           end
         end
 
         it "returns a result with the expected matching filters" do
           VCR.use_cassette("single_result_with_filters") do
-            results = GSA.pretty_search(query, :filters => filters)
+            results = GSA.search(query, :filters => filters)
 
             results.each.inject([]) {|flags, result| result[:metatags].each {|tag|
                 flags << 1 if tag[:meta_name] == filter_1_name && tag[:meta_value] == filter_1_value
@@ -238,7 +238,7 @@ describe GSA do
 
         it "returns the no record flag" do
           VCR.use_cassette("no_result_with_filters") do
-            results = GSA.pretty_search(query, :filters => filters)
+            results = GSA.search(query, :filters => filters)
             results.should eq GSA::NO_RESULTS
           end
         end
@@ -256,7 +256,7 @@ describe GSA do
         it "raises an error" do
           expect { 
 
-            GSA.pretty_search(query, :filters => filters) 
+            GSA.search(query, :filters => filters) 
 
           }.to raise_error GSA::URINotSetError
         end
@@ -291,7 +291,7 @@ describe GSA do
     end
   end
 
-  describe "#uids_from_pretty_search" do
+  describe "#uids" do
 
     context "with multiple records passed in" do
 
@@ -299,7 +299,7 @@ describe GSA do
       let(:uids)        { many_uids }
 
       it "returns multiple uids" do
-        results = GSA.uids_from_pretty_search(results_set, uid)
+        results = GSA.uids(results_set, uid)
         results.should eq uids
       end
     end
@@ -310,7 +310,7 @@ describe GSA do
       let(:uids)        { one_uids }
 
       it "returns a single uid" do
-        results = GSA.uids_from_pretty_search(results_set, uid)
+        results = GSA.uids(results_set, uid)
         results.should eq uids
       end
     end

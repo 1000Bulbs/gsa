@@ -1,20 +1,20 @@
 module Facade
-  def direct_feed(args)
+  def feed(args)
     xml = records_to_xml(args)
-    feed(xml, args[:datasource_name])
+    feed_to_gsa(xml, args[:datasource_name])
   end
 
-  def pretty_search(query, filters={})
-    raw_results = search(query, filters)
+  def search(query, filters={})
+    raw_results = search_gsa_index(query, filters)
     return raw_results if raw_results == GSA::NO_RESULTS
-    pretty_search_results(raw_results)
+    beautify_search_results(raw_results)
   end
 
   def facet(search_results, facetables)
     GSA::Faceter.facet(search_results, facetables)
   end
 
-  def uids_from_pretty_search(pretty_search_results, uid)
+  def uids(pretty_search_results, uid)
     GSA::UIDExtractor.extract(pretty_search_results, uid)
   end
 
@@ -22,7 +22,7 @@ module Facade
   protected
   #########
 
-  def feed(xml_file, datasource_name)
+  def feed_to_gsa(xml_file, datasource_name)
     if GSA.base_uri
       GSA::Feeder.feed(xml_file, datasource_name)
     else
@@ -30,7 +30,7 @@ module Facade
     end
   end
 
-  def search(query, filters={})
+  def search_gsa_index(query, filters={})
     if GSA.base_uri
       GSA::Searcher.search(query, filters)
     else
@@ -38,7 +38,7 @@ module Facade
     end
   end
 
-  def pretty_search_results(search_results)
+  def beautify_search_results(search_results)
     GSA::SearchConverter.convert(search_results)
   end
 
