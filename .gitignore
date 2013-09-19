@@ -2,4 +2,7 @@
 coverage
 *.xml
 Gemfile.lock
-gsa-*.gem
+*.gem
+*.rbc
+.bundle
+.config

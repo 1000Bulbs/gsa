@@ -2,6 +2,7 @@ require 'rest_client'
 require 'active_support/core_ext'
 require 'json'
 
+require_relative 'gsa/version'
 require_relative 'gsa/modules/injector'
 require_relative 'gsa/modules/xmlizer'
 require_relative 'gsa/modules/filer'
