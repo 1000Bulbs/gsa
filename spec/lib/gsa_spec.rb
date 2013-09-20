@@ -16,7 +16,8 @@ describe GSA do
         it "successfully adds the records to the gsa index" do
           VCR.use_cassette("many_records") do
             results = GSA.feed(
-              :file_name       => "out", :records => many_records, 
+              :file_name       => "out", 
+              :records         => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
               :datasource_uri  => "http://0.0.0.0:3000/products",
@@ -32,7 +33,8 @@ describe GSA do
         it "successfully adds the records to the gsa index" do
           VCR.use_cassette("single_record") do
             results = GSA.feed(
-              :file_name       => "out", :records => many_records, 
+              :file_name       => "out", 
+              :records         => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
               :datasource_uri  => "http://0.0.0.0:3000/products",
@@ -51,7 +53,8 @@ describe GSA do
         it "successfully deletes the records from the gsa index" do
           VCR.use_cassette("delete_many_records") do
             results = GSA.feed(
-              :file_name       => "out", :records => many_records, 
+              :file_name       => "out", 
+              :records         => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
               :datasource_uri  => "http://0.0.0.0:3000/products",

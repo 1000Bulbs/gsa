@@ -2,7 +2,6 @@ module GSA
   class RecordsConverter
     extend XMLizer
     extend Injector
-    extend Filer
 
     def self.convert(args)
       records         = args[:records]
@@ -16,7 +15,7 @@ module GSA
       # if there is only one record, convert to the expected array.
       records = [records] if records.is_a? Hash
 
-      build_xml_file(file_name, layout(records, searchable, datasource_name, datasource_uri, datasource_uid, action))
+      layout(records, searchable, datasource_name, datasource_uri, datasource_uid, action)
     end
 
     #######
@@ -55,7 +54,7 @@ module GSA
     end
 
     def self.record_metadata(record)
-      inject_s(record) {|key, value| tag(:meta, {:name => key, :content => value})}
+      inject_s(record) {|key, value| tag(:meta, {:name => key.to_s, :content => value.to_s})}
     end
   end
 end
