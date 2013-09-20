@@ -5,7 +5,6 @@ module GSA
 
     def self.convert(args)
       records         = args[:records]
-      file_name       = args[:file_name]
       searchable      = args[:searchable]
       datasource_name = args[:datasource_name]
       datasource_uri  = args[:datasource_uri]
