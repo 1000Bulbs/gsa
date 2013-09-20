@@ -108,9 +108,9 @@ query
 Optional Parameters:
 
 :filter
->*Maps to the GSA 'filter' parameter
->*Accepted values: 0, 1, s, p
->*Default value: 0
+>* Maps to the GSA 'filter' parameter
+>* Accepted values: 0, 1, s, p
+>* Default value: 0
 
 :getfields
 >* Maps to the GSA 'getfields' parameter
