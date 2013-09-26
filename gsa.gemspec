@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   "internal search".
   }
 
-  spec.homepage      = 'https://rubygems.org/gems/gsa'
+  spec.homepage      = 'https://github.com/1000Bulbs/gsa'
   spec.license       = 'MIT'
   
   spec.files         = `git ls-files`.split($/)
@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 1.13.0'
   spec.add_development_dependency 'vcr', '~> 2.5.0'
   spec.add_development_dependency 'simplecov', '~> 0.7.1'
+  spec.add_development_dependency 'rspec', '~> 2.13.0'
 
   spec.add_runtime_dependency 'rest-client', '~> 1.6.7'
   spec.add_runtime_dependency 'activesupport', '~> 4.0.0'
