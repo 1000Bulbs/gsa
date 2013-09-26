@@ -18,7 +18,7 @@ module GSA
 
     # for creating attributes on tags
     def attributor(attributes)
-      inject_s(attributes) {|key, value| " #{key.to_s}='#{value.to_s}'"}
+      inject_s(attributes) {|key, value| " #{key.to_s}=\"#{value.to_s}\""}
     end
   end
 end
