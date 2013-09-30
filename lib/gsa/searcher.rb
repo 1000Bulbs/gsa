@@ -7,9 +7,10 @@ module GSA
       sort            = args[:sort]      || GSA::DEFAULT_SORT
       num             = args[:num]       || GSA::DEFAULT_NUM  
       output          = args[:output]    || GSA::DEFAULT_OUTPUT
+      start           = args[:start]     || GSA::DEFAULT_START
       requiredfields  = args[:filters]   || nil
 
-      search = "#{GSA.base_uri}/search?q=#{query}&filter=#{filter}&getfields=#{getfields}&sort=#{sort}&num=#{num}&output=#{output}"
+      search = "#{GSA.base_uri}/search?q=#{query}&filter=#{filter}&getfields=#{getfields}&sort=#{sort}&num=#{num}&start=#{start}&output=#{output}"
       search = "#{search}&requiredfields=#{clean_query(requiredfields)}" if requiredfields
 
       search_results = parsed_json( RestClient.get(search) )
