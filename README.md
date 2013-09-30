@@ -74,7 +74,7 @@ GSA.search( query )
 To extract the UIDs from the search results, use the uids method on the search results:
 
 ```ruby
-GSA.uids( search_results )
+GSA.uids( search_results, "id" )
 ```
 
 To filter results using GSA filters, pass in an optional 'filters' key-value pair:
