@@ -121,15 +121,21 @@ Optional Parameters:
 >* Default value: "*"
 
 :sort
->* Maps to the GSA 'sort' parameter.
+>* Maps to the GSA 'sort' parameter
 >* Accepted values: 'relevance', 'date'
 >* Default value: 'relevance'
 
 :num
->* Maps to the GSA 'num' parameter.
+>* Maps to the GSA 'num' parameter
 >* Use this parameter to limit the number of search results returned
 >* Accepted values: 1..1000
 >* Default value: 1000
+
+:start
+>* Maps to the GSA 'start' parameter
+>* Use this parameter alongside 'num' for pagination of search results
+>* Accepted values: 0..results_set_last_result
+>* Default value: 0 ( starts with first result )
 
 :output
 >* Maps to the GSA 'output' parameter.
