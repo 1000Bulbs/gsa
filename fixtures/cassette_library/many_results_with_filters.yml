@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Sylvania&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Sylvania&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''
@@ -65,7 +65,7 @@ http_interactions:
   recorded_at: Wed, 18 Sep 2013 13:00:08 GMT
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''

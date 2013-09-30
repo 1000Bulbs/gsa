@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Fiberglass&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Fiberglass&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''
@@ -56,7 +56,7 @@ http_interactions:
   recorded_at: Wed, 18 Sep 2013 13:41:27 GMT
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Glass&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Glass&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''
@@ -121,7 +121,7 @@ http_interactions:
   recorded_at: Wed, 18 Sep 2013 13:41:58 GMT
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Brass&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&requiredfields=brand:Philips.material:Brass&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''

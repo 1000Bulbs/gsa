@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20bulb&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20bulb&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''
@@ -201,7 +201,7 @@ http_interactions:
   recorded_at: Wed, 18 Sep 2013 12:24:26 GMT
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=excellent%20blue%20bulb&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''
@@ -288,7 +288,7 @@ http_interactions:
   recorded_at: Wed, 18 Sep 2013 12:27:07 GMT
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20Incandescent%20bulb%20excellent%20and%20haunting&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20Incandescent%20bulb%20excellent%20and%20haunting&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''
@@ -354,7 +354,7 @@ http_interactions:
   recorded_at: Wed, 18 Sep 2013 12:39:05 GMT
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20Incandescent%20bulb%20excellent%20and%20haunting%20blue%20bulb&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=blue%20Incandescent%20bulb%20excellent%20and%20haunting%20blue%20bulb&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''
@@ -420,7 +420,7 @@ http_interactions:
   recorded_at: Wed, 18 Sep 2013 12:40:12 GMT
 - request:
     method: get
-    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=amazing%20and%20heavenly%20red%20bulb&sort=relevance
+    uri: http://dev-gsa.1000bulbs.com/search?filter=0&getfields=*&num=1000&output=xml_no_dtd&q=amazing%20and%20heavenly%20red%20bulb&sort=relevance&start=0
     body:
       encoding: US-ASCII
       string: ''
