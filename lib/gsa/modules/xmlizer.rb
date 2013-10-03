@@ -3,7 +3,7 @@ module GSA
     include Injector
 
     def xml(content)
-      GSA::XML_TYPE << "\n" << GSA::DOC_TYPE << "\n" << content
+      "#{GSA::XML_TYPE}\n#{GSA::DOC_TYPE}\n#{content}"
     end
 
     # for single-line tags
