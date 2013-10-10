@@ -20,6 +20,7 @@ module Defaults
   DEFAULT_SORT           = "relevance"   # OPTIONS: relevance, date
   DEFAULT_OUTPUT         = "xml_no_dtd"  # OPTIONS: xml_no_dtd, xml
   DEFAULT_START          = "0"           # OPTIONS: 0..max_search_results
+  DEFAULT_CLIENT         = "default_frontend"
   NO_RESULTS             = 0
 
   # values for making xml files
@@ -39,4 +40,17 @@ module Defaults
   META_NAME              = "N"
   META_VALUE             = "V"
   SEARCH_RESULT_SNIPPET  = "S"
+
+  # values for parsing returned dynamic navigation ( faceting )
+  FACETS                 = "PARM"
+  FACET                  = "PMT"
+  FACET_RAW_NAME         = "NM"
+  FACET_DISPLAY_NAME     = "DN"
+  FACET_IS_RANGE         = "IR" # 1, 0 (boolean)
+  FACET_TYPE             = "T"  # 0-Integer, 1-String, 2-Float, 3-Currency, 4-Date
+  BUCKET                 = "PV"
+  BUCKET_VALUE           = "V"
+  BUCKET_LOW_RANGE       = "L"
+  BUCKET_HIGH_RANGE      = "H"
+  BUCKET_COUNT           = "C"
 end
