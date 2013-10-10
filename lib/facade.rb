@@ -14,10 +14,6 @@ module Facade
     GSA::UIDExtractor.extract(pretty_search_results, uid)
   end
 
-  #########
-  protected
-  #########
-
   def feed_to_gsa(xml_file, datasource_name)
     if GSA.base_uri
       GSA::Feeder.feed(xml_file, datasource_name)
