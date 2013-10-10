@@ -144,42 +144,22 @@ Optional Parameters:
 >* Default value: 'no_dtd_xml'
 
 :filters
->* Maps the the GSA 'requiredfields' parameter
+>* Maps to the GSA 'requiredfields' parameter
 >* Filters search results to conform to specific required attributes
 >* Example: 'name:Foo'
 >* Example: 'name:Foo.price:12'
 
+:client
+>* Maps to the GSA 'client' parameter
+>* Determines which Front End you want to search against
+>* Default value: 'default_frontend'
+
 ## Faceting
 
-To leverage faceting, simply pass in an array of symbols representing the attributes you want
-faceting for, alongside the search results you want faceted.
+To leverage faceting, you need to enable Dynamic Navigation and
+configure a Front End on your GSA box. 
 
-```ruby
-categories = [:name, :brand]
-facets     = GSA.facet(search_results, categories)
-
-puts facets
-# {:name => [["Foo", 1], ["Bar", 1]], :brand => [["BazBrand", 2]]}
-```
-
-### Faceting Results
-
-The faceting method yields results in the following format:
-
-```ruby
-{
-  :category_one =>
-    [
-      ["Cluster 1", amount_of_records_in_cluster],
-      ["Cluster 2", amount_of_records_in_cluster],
-      ["Cluster 3", amount_of_records_in_cluster]
-    ],
-  :category_two =>
-    [
-      ["Cluster 1", amount_of_records_in_cluster]
-    ]
-}
-```
+[Read more information here.](https://developers.google.com/search-appliance/documentation/68/help_gsa/serve_dynamic_navigation)
 
 ## Copyright
 Copyright (c) 2013 1000Bulbs.com.
