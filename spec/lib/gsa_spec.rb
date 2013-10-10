@@ -14,6 +14,7 @@ describe GSA do
       context "many records" do
 
         it "successfully adds the records to the gsa index" do
+
           VCR.use_cassette("many_records") do
             results = GSA.feed(
               :records         => many_records, 
@@ -30,6 +31,7 @@ describe GSA do
       context "a single record" do
 
         it "successfully adds the records to the gsa index" do
+
           VCR.use_cassette("single_record") do
             results = GSA.feed(
               :records         => many_records, 
@@ -49,6 +51,7 @@ describe GSA do
       context "many records" do
 
         it "successfully deletes the records from the gsa index" do
+
           VCR.use_cassette("delete_many_records") do
             results = GSA.feed(
               :records         => many_records, 
@@ -66,6 +69,7 @@ describe GSA do
       context "a single record" do
 
         it "successfully deletes the record from the gsa index" do
+
           VCR.use_cassette("delete_single_record") do
             results = GSA.feed(
               :records         => one_records, 
@@ -114,6 +118,7 @@ describe GSA do
         let(:results_set) { many_results }
 
         it "returns many records" do
+
           VCR.use_cassette("many_results_no_filters") do
             results = GSA.search(query)
             results.count.should eq results_set.count
@@ -121,6 +126,7 @@ describe GSA do
         end
 
         it "returns results in the expected 'pretty' format" do
+
           VCR.use_cassette("many_results_no_filters") do
             results = GSA.search(query)
             results.should eq results_set
@@ -134,16 +140,18 @@ describe GSA do
         let(:result_set) { one_results }
 
         it "returns a single record" do
+
           VCR.use_cassette("single_result_no_filters") do
             results = GSA.search(query)
-            results.count.should eq 1
+            results[:result_sets].count.should eq 1
           end
         end
 
         it "returns the single result in the expected 'pretty' format" do
+
           VCR.use_cassette("single_result_no_filters") do
             results = GSA.search(query)
-            results.should eq result_set
+            results[:result_sets].should eq result_set[:result_sets]
           end
         end
       end
@@ -153,6 +161,7 @@ describe GSA do
         let(:query) { none_query }
 
         it "returns the no record flag" do
+
           VCR.use_cassette("no_result_no_filters") do
             results = GSA.search(query)
             results.should eq GSA::NO_RESULTS
@@ -167,23 +176,25 @@ describe GSA do
 
         let(:query)        { many_query }
         let(:results_set)  { many_results }
-        let(:filter_name)  { "brand" }
-        let(:filter_value) { "Philips" }
+        let(:filter_name)  { "attribute_brand" }
+        let(:filter_value) { "HLS" }
         let(:filters)      { "#{filter_name}:#{filter_value}" }
 
         it "returns less than the unfiltered results" do
+
           VCR.use_cassette("many_results_with_filters") do
             results = GSA.search(query, :filters => filters)
-            results.count.should be < results_set.count
+            results[:result_sets].count.should be < results_set[:result_sets].count
           end
         end
 
         it "should only contain results matched in the unfiltered results" do
+
           VCR.use_cassette("many_results_with_filters") do
             results = GSA.search(query, :filters => filters)
 
             filtered_results = []
-            results_set.each {|result| 
+            results_set[:result_sets].each {|result| 
               result[:metatags].each {|tag| 
                 if tag[:meta_name] == filter_name && tag[:meta_value] == filter_value
                   filtered_results << result
@@ -191,7 +202,7 @@ describe GSA do
               }
             }
 
-            result_uids   = GSA.uids(results, uid)
+            result_uids   = GSA.uids(results[:result_sets], uid)
             filtered_uids = GSA.uids(filtered_results, uid)
             result_uids.should eq filtered_uids
           end
@@ -202,24 +213,26 @@ describe GSA do
 
         let(:query)          { many_query }
         let(:results_set)    { many_results }
-        let(:filter_1_name)  { "brand" }
-        let(:filter_1_value) { "Philips" }
-        let(:filter_2_name)  { "material" }
-        let(:filter_2_value) { "Brass" }
+        let(:filter_1_name)  { "attribute_color" }
+        let(:filter_1_value) { "Red" }
+        let(:filter_2_name)  { "attribute_brand" }
+        let(:filter_2_value) { "Vickerman" }
         let(:filters)        { "#{filter_1_name}:#{filter_1_value}.#{filter_2_name}:#{filter_2_value}" }
 
         it "returns a single filtered result" do
+
           VCR.use_cassette("single_result_with_filters") do
             results = GSA.search(query, :filters => filters)
-            results.count.should eq 1
+            results[:result_sets].count.should eq 1
           end
         end
 
         it "returns a result with the expected matching filters" do
+
           VCR.use_cassette("single_result_with_filters") do
             results = GSA.search(query, :filters => filters)
 
-            results.each.inject([]) {|flags, result| result[:metatags].each {|tag|
+            results[:result_sets].each.inject([]) {|flags, result| result[:metatags].each {|tag|
                 flags << 1 if tag[:meta_name] == filter_1_name && tag[:meta_value] == filter_1_value
                 flags << 1 if tag[:meta_name] == filter_2_name && tag[:meta_value] == filter_2_value
               }
@@ -235,6 +248,7 @@ describe GSA do
         let(:filters) { "brand:FooBar" }
 
         it "returns the no record flag" do
+
           VCR.use_cassette("no_result_with_filters") do
             results = GSA.search(query, :filters => filters)
             results.should eq GSA::NO_RESULTS
@@ -252,6 +266,7 @@ describe GSA do
         end
 
         it "raises an error" do
+
           expect { 
 
             GSA.search(query, :filters => filters) 
@@ -272,7 +287,8 @@ describe GSA do
       let(:facet_results) { many_facet_results }
 
       it "returns multiple facets in the expected form" do
-        results = GSA.facet(results_set, facetables)
+
+        results = GSA.facet(results_set[:result_sets], facetables)
         results.should eq facet_results
       end
     end
@@ -283,7 +299,8 @@ describe GSA do
       let(:facet_results) { one_facet_results }
 
       it "returns a single facet in the expected form" do
-        results = GSA.facet(results_set, facetables)
+
+        results = GSA.facet(results_set[:result_sets], facetables)
         results.should eq facet_results
       end
     end
@@ -297,7 +314,8 @@ describe GSA do
       let(:uids)        { many_uids }
 
       it "returns multiple uids" do
-        results = GSA.uids(results_set, uid)
+
+        results = GSA.uids(results_set[:result_sets], uid)
         results.should eq uids
       end
     end
@@ -308,7 +326,8 @@ describe GSA do
       let(:uids)        { one_uids }
 
       it "returns a single uid" do
-        results = GSA.uids(results_set, uid)
+
+        results = GSA.uids(results_set[:result_sets], uid)
         results.should eq uids
       end
     end

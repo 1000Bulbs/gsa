@@ -480,4 +480,133 @@ http_interactions:
         44KJXfWzPTgpGF5O5pe/Ec/w1N8GAAA=
     http_version: 
   recorded_at: Wed, 18 Sep 2013 12:43:03 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?client=default_frontend&filter=0&getfields=*&num=1000&output=xml_no_dtd&q=amazing%20and%20heavenly%20red%20bulb&sort=relevance&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Oct 2013 13:10:53 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '420'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI2Uy26DMBBF9/kKy4ssEoVHaKpEIURZtFUXUZtHu0UOTKgl
+        YxMwqO3X16QNUEwfEguP5547ZvDgLl9jhgpIMyr4AtuGhRHwQISURwt8v3sY
+        TaeT2cjGKJOEh4QJDgvMBV56Pfdu94ieb7YL7BhjrOL92rMMa3J1bduuqQJ3
+        45GYvCsrpFj0AqQAzt5QCiE65OzgmhtFPa62qzXiJFbGJ4wKwnK1+hXESKQ0
+        opww/7t8qOTDi3yo5MOz3GyVOVImIa1qWbqfpTERyCMFFmYVNtCxgYZlIpUV
+        kQKDgvAAdLJOtR14HlcGtmV1HPa8qxWWpFH5X68ocpnkNaNuhs+FH8pQhxu5
+        tkvAKPDaJYQjyZn0j6ngEniHl6ZoO1Ko3J72t6OpbvG53eZyRnhUoTqlF0oa
+        nTbG6pk4xmTW1fFGtu1CggCy+pokOp5ojOrYqb6Qjo443Uj89xfeJcCYmg3P
+        3eVRBJlUk45OP00YuYxY9+j2mZwf+pGclwtaLkqiDEx62TbPgq8Jr2t6KqiO
+        Yqp/h9f7AMuMDw5+BAAA
+    http_version: 
+  recorded_at: Thu, 10 Oct 2013 13:10:33 GMT
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?client=default_frontend&filter=0&getfields=*&num=1000&output=xml_no_dtd&q=(100)%20Bulbs%20frosted%20white%20red%20mini%20red%20christmas%20lights%20120V%20Green%20Wire%206%20in.&sort=relevance&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Oct 2013 13:14:50 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1262'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAM1XW3ObOhB+76/Q8NBp63DxtU6K6biJkzi1k9Q4SU9fGAVk
+        zFQIAiKXf39WwgZsyKQzpw9nJgOy9ttP2m9Xi2J+fQ4peiRJGkRspLQ1Q0GE
+        uZEXMH+kTO0rdTjsH6ptBaUcMw/TiJGRwiLlq/XOPLOv0e1kMVK6WkeB38u5
+        ZWjt4bA9GJg6/DB/WB/ahvERfcvofYpWSZRy4qGndcAJSmAUBiyQA3edBCkP
+        cYpo4K95itod4xadJYQwdBckBA1QwDRT/wGrXI8X4zliOISNPCjoEdMMRn91
+        IQVFSeAHDFOnSt+S9K0NfUvSt4C1JejloKBv5fQtQd+S9C1B3xq0BL2+F8Yq
+        oJwkRSxGfX2j5uMTvgoI9dLC7VPd7VPNLY0SXngkhJJHzFxS9yxN+wwsCwsC
+        UKVhs3K2tjDHlZX/KMQo43FW+kClOixyPO7VnSu2fRaXBoSVLB5Z4YxyB7LI
+        OGENXDXEPmNACrab5ak6rFPk0/t+GcXML1zrXvWF4orSWgf++l2tf9ikeMW6
+        z4Jdl6RlmcR197jmA4o9lAXZrbt0m13CtzNsx4RSaC+WaWe+T1IOnQc9/I0T
+        XDnA/63xvKf8y/17n38Rg0AMCn4xowdbmy5R2+5UxmPBjyLMxcRG9iUkSUET
+        +QIR5lbb1Ocw+LkUmixQbp9P55ORwskz12OKA6ZY5o215jw+0vWnpydNnKx7
+        EZPmRqEeJ5GXuVz/fDjomvoNYCd/DJ5Y5tL6UAQK2DKej6UAUsBKpGppOt2o
+        eidULSEHJWJBvMb5vN3ORQ5mUvWdBWaE+XxdojVNK+3wXQFBv1s9U4enOblc
+        OvbVzeJ4Yi176vhi0F/MznrzXxf2wtQrRnO+FAoHcNpvR4qQAEpxMymqV05X
+        S0ZFO+EdIIjlANU2Xm63b2h9tOIazAgGZMfYheznpQGTlU+MKous3ECWULn+
+        m6mrplA/n9nqAHDLxfjkTFvzkJaMcRK4eUzQGIb90hDGTE4XjqUp5ZH724Ev
+        f+64Q19BYUpSJ2L0RaJWmKaktLqYEz9KXpwY87UEwBlT5bFTfSGAWpw3VRxB
+        VR46NeUJSJU28CRkRRLCNsF0Bp12RbbYA5jnYJ4bjXZXbRuq0Vu2jaNu76j7
+        +VcJxhzWuM84ce4TzLxtiE2AGL5T8C3RXhOqRD7BEPv53npGE+IxogUCkt64
+        H8wYSZxCGCdv19A7SSr9/iFpkx8OY5JsuQ2t22skFzXkANDJNd7URPNGAAv5
+        p1EiUa/W/6u+aV7yuW5NKDeCUF3RHyVmDrWEeIROSQijJgdKsAcPccBeZ5U1
+        RHZwvUOt3wTlOKBv8vGIwycr16sKFie8ef0VcdZRluTp6hrN8ob4WasosAEj
+        m/DG9PKXOE9tpds01iB0lErWXs2QxPk42xRMp4PGd41FnYFCgci8xE2ZF0WJ
+        fpVx8W5MKk6J85BhxgOeN4WOlMn+P39dJDiRU5XGvbOvite2lxf2QcWYt/e9
+        1YubQi0u0forFrgnWOZsfHlmEWbqcmCej8UcSHiM7F9wXH8r6Hh6Ao3gJl1E
+        U+r+TIcX4ipxvPMPGuB16akvLHEvE5eL62PLMHV4mtcibfOGPngCyfyWD6cL
+        eWtbiqdwvt02STQTt9Vz8TgW1xRxY9GBUb7ylXS45IgX/EtovfsXEILg21UO
+        AAA=
+    http_version: 
+  recorded_at: Thu, 10 Oct 2013 13:14:30 GMT
+recorded_with: VCR 2.6.0

@@ -52,4 +52,57 @@ http_interactions:
         Q53Lu7sJzKsrVn8Q/Qa0uAIAAA==
     http_version: 
   recorded_at: Wed, 18 Sep 2013 12:50:16 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?client=default_frontend&filter=0&getfields=*&num=1000&output=xml_no_dtd&q=FooBar&sort=relevance&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Oct 2013 13:19:06 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '333'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI2T32uDMBCA3/tXhDwWqmldtxbU0sE69lDWX9urBD0lEC82
+        xrI/f2EFdUbYIA/mLt938ZKEm69SkhvoWiiM6NxjlACmKhNYRPTt/D5brZbr
+        2ZyS2nDMuFQIEUVFN/EkfD0fyOfLKaKBt6B2ftnHzGPBw/rpMfTtJDzGO6We
+        uQ79o00ftqftniAvreFKyY3Lxn7dV1CitCgEcpn8jvsDMBfSgG5p5oLMYQow
+        uQCZ1S02dbGpg9VKm5bQIOHGMQWX7FJDAzZlK5gzNrLZn6hT2PBe5X/9ompM
+        1XSMPdQEVZKZzIV7uaEllQKws2SQ80aaJNcKDeCIy1kxNApobR+X3WzlKu7h
+        IddIjkWLupRbqOp12lvYsQy85Xqs473s0MLTFOrumlQuXjmM7di1u5CBiwTj
+        SPn3Cfv2hcWTb3L9OsakAwAA
+    http_version: 
+  recorded_at: Thu, 10 Oct 2013 13:18:46 GMT
+recorded_with: VCR 2.6.0

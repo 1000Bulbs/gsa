@@ -1,1 +1,1 @@
-[:voltage]
+[:attribute_brand]

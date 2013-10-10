@@ -182,4 +182,128 @@ http_interactions:
         GwcAAA==
     http_version: 
   recorded_at: Wed, 18 Sep 2013 13:42:10 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?client=default_frontend&filter=0&getfields=*&num=1000&output=xml_no_dtd&q=red%20christmas%20lights&requiredfields=brand:Philips.material:Brass&sort=relevance&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Oct 2013 13:36:26 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '385'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI2TXW+DIBiF7/srCJdtqlTXxDZq0yXbsotm7drt1jBFS4Jg
+        AZv9/JF9qAGzLfFCeM9zXuBAvHmvGbgSqajgCVx4CALCc1FQXiXw8fg0j6Ll
+        ar6AQGnMC8wEJwnkAm7SSfxw3IPXu+cEhl4Azfi0S5GHwuAmCmLfDOJDKkkB
+        8rOkStdYAUars1axfzDi/fZ5uwMc18bvAsEVs9b8jekhEJJWlGOW9apZp5p9
+        q3zLtKRME9k5I9cGOUxFdEkJK1SHTV1s6mBKSD3YAiNXzHMytu6fku3A27oz
+        WCA0stjPWaexxoPO/9qiaHXT9oyJP+MiK3ThwoOa7ZIzSnjvUpASt0xnpRRc
+        Ez7i5ShsR0kuLTXBWuf/Js21W+/PlNFGeTU2kVLM1rcSq5GL8ava7khJ1+Xl
+        dD+PXLuvaZtrGeZVh7qU26gZZOsF5luG3nI1lvGgarvgPCeqP5jGxRuHMRld
+        +icQukg4jtR/3ynfvP508gGXpgVsQAQAAA==
+    http_version: 
+  recorded_at: Thu, 10 Oct 2013 13:36:05 GMT
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?client=default_frontend&filter=0&getfields=*&num=1000&output=xml_no_dtd&q=red%20christmas%20lights&requiredfields=attribute_color:Red.attribute_brand:Vickerman&sort=relevance&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Oct 2013 13:38:49 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1114'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAL1XXXPaOhB976/Q+KEP7fiLr5DUuJNLSZo0TgiQTJsXRtgC
+        NBGyI8tJ8++7ksE22G3alzvDGFl7ztFqtdoF7/PPDUPPRKQ05gPDtRwDER7G
+        EeWrgXExvTH7/e6x6RoolZhHmMWcDAweG5/9d975dIzuR5OB0bZaBrzPAt+x
+        nI7T6rY9G168W1+QCIVrQVO5wSlidLWWqWffAnh8OjkNEMcb0Hsy0DNmGYya
+        8AaKBV1Rjtm8RH0sUB+3KPtAdEmZJKJQduoyTo2zInJJCYvSgvahTvtQo6Wx
+        kJUtMPKMeUia/N6ZDhV4tikEXMdpcFbP1haWuLLyX20xzmSSlRw4/jmP55GM
+        6uSK7VAlZJTwUiUiS5wxOV+KmEvCG7RqiENFQZ4yCgd7EH8spaCLTJJ5GLNY
+        nExIZJVzCwFJeXJPw0ciNpjXl/03+qFPlBR+3M3OzH5dP58+5GUM81VBrbPq
+        CyWV07da8Om2re5xUxZUrIcqOAxJWoYuqdOTGgdO8am8JO06pd1M2byddZPR
+        FE2vwWcDjfQXzAW+69kBDL7PNATl9uAiGA0MSX5KO2GYcsP37vy1lMmJbb+8
+        vFgq+RcZW6RWGG/sRMRRFkq757q9vmffAXj09+iR7838Y7SUFnrP5KfF+5X8
+        NNwVEzVj6yl0jgUcY4RMNGQ4TWmIxvdDdE1IxEgKswUZcqpCM9FpumbktbRb
+        llXaoTD63uSb3/FseHqj69l8enM3GY78Wcc8vex1J1fnneDhcjrx7IrRC2Yq
+        VBRu1v3A0FuBGG9n1bHo+XxXxWbe3AJ4Xvo7TUQWEngfQ5miEr1QudaIgHKK
+        rnSRRWAurgv61u+1XLdTOpIJpv148yz2zsQeBtNzcytmreWGlYqJoGG+t+6x
+        deSUhk3C9XTNh1TG4SPc9iinVbUrIAwBmMecvWrQErOUlNYQS7KKxes8wXKt
+        AViHyEx1iMyi9ZirPMBpA1eQJRGE77w/6rUrcUoigEVzLLWx5bht03VMpzNz
+        nZP20Um781CCD8qVZlRLVg22xBu63dje0TZhE+gfUOOt5liWuOeYSbzK9+K2
+        nEbvMOdEzIvgzPNyBLWBpJr3g6RNPGh9C+DFy7nOk3wJp3kJAOSFXKMgOX+L
+        kq9J7u0FDyFqJA1Vv2pAvynHCF9t08B1+k2IFxrtAI3BWxN1ef4AKEMgaZJH
+        oNVtjMAG8kZQnF+z3aWeKVKTX1hAxsg8FVz0g2ChYNP/o/rtqonGCW2r1pXf
+        0HWpKWx5zdlTrxUf5NlT37s6vT73CfdsPfC+nqo52OoQTR9g648GGl58GRg3
+        38+OJllw3DNvL1VTGu79xAW8rZn2xFcNT7Wp8dB3PBue3lhFN2i4jl8g5v/l
+        w4uJbocz9VTk+/27iq7Uj4Gv6jFUbU91QBt0FbSmvs1LpT7Mh43qKmn/SXdX
+        HZTw2XbcqLxfO/6whr2NlQ0NX33B3wL/3S8tvbsqWQwAAA==
+    http_version: 
+  recorded_at: Thu, 10 Oct 2013 13:38:28 GMT
+recorded_with: VCR 2.6.0

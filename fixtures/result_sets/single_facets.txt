@@ -1,1 +1,1 @@
-{:voltage=>[["220", 2], ["120", 3], ["65", 2], ["135", 2], ["45", 5], ["140", 1], ["115", 1], ["110", 1], ["75", 1], ["100", 1]]}
+{:attribute_brand=>[["Hls", 27], ["Christmas lite co.", 13], ["Shl", 16], ["Minleon", 2], ["Gki bethlehem", 1], ["Precision lighting", 1], ["Flextec", 2], ["Vickerman", 1], ["Antique light bulb co.", 1]]}
