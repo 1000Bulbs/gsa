@@ -10,10 +10,6 @@ module Facade
     beautify_search_results(raw_results)
   end
 
-  def facet(search_results, facetables)
-    GSA::Faceter.facet(search_results, facetables)
-  end
-
   def uids(pretty_search_results, uid)
     GSA::UIDExtractor.extract(pretty_search_results, uid)
   end

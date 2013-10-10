@@ -1,1 +1,0 @@
-[:attribute_brand, :attribute_color]

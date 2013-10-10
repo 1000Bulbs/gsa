@@ -277,35 +277,6 @@ describe GSA do
     end
   end
 
-  describe "#facet" do
-
-    let(:results_set) { many_results }
-
-    context "with multiple facets" do
-
-      let(:facetables)    { many_facets }
-      let(:facet_results) { many_facet_results }
-
-      it "returns multiple facets in the expected form" do
-
-        results = GSA.facet(results_set[:result_sets], facetables)
-        results.should eq facet_results
-      end
-    end
-
-    context "with a single facet" do
-
-      let(:facetables)    { one_facets }
-      let(:facet_results) { one_facet_results }
-
-      it "returns a single facet in the expected form" do
-
-        results = GSA.facet(results_set[:result_sets], facetables)
-        results.should eq facet_results
-      end
-    end
-  end
-
   describe "#uids" do
 
     context "with multiple records passed in" do
