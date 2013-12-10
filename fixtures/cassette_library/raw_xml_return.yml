@@ -1,0 +1,116 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dev-gsa.1000bulbs.com/search?client=default_frontend&filter=0&getfields=*&num=1000&output=xml_no_dtd&q=(100)%20Bulbs%20frosted%20white%20red%20mini%20red%20christmas%20lights%20120V%20Green%20Wire%206%20in.&sort=relevance&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Dec 2013 15:33:59 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '3017'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        AAA=
+    http_version: 
+  recorded_at: Tue, 10 Dec 2013 15:34:11 GMT
+recorded_with: VCR 2.6.0
