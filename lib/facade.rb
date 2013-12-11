@@ -4,11 +4,10 @@ module Facade
     feed_to_gsa(xml, args[:datasource_name])
   end
 
-  def search(query, filters={}, xml=false)
-    raw_results = search_gsa_index(query, filters, xml)
+  def search(query, filters={})
+    raw_results = search_gsa_index(query, filters)
     return raw_results if raw_results == GSA::NO_RESULTS
-    return beautify_search_results(raw_results) unless xml
-    raw_results
+    beautify_search_results(raw_results)
   end
 
   def uids(pretty_search_results, uid)
@@ -23,9 +22,9 @@ module Facade
     end
   end
 
-  def search_gsa_index(query, filters={}, xml=false)
+  def search_gsa_index(query, filters={})
     if GSA.base_uri
-      GSA::Searcher.search(query, filters, xml)
+      GSA::Searcher.search(query, filters)
     else
       raise GSA::URINotSetError, GSA::NO_URI_TEXT
     end

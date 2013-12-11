@@ -27,10 +27,6 @@ module Fixtures
     read 'fixtures/result_sets/single.txt'
   end
 
-  def one_results_xml
-    read 'fixtures/result_sets/single_xml.txt'
-  end
-
   def many_facets
     read 'fixtures/facets/many.txt'
   end

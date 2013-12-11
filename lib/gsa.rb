@@ -20,6 +20,8 @@ require_relative 'gsa/readable_results/readable_result_sets'
 require_relative 'defaults'
 require_relative 'facade'
 
+ActiveSupport::XmlMini.backend = 'LibXML'
+
 module GSA
   class << self
     attr_accessor :base_uri

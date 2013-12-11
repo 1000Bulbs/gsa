@@ -274,35 +274,6 @@ describe GSA do
           }.to raise_error GSA::URINotSetError
         end
       end
-
-      context "with the xml flag set to true" do
-
-        let(:query) { one_query }
-        let(:results_set) { one_results_xml }
-
-        it "returns the raw xml from the search" do
-
-          VCR.use_cassette('raw_xml_return') do
-
-            results = GSA.search(query, {}, true)
-            results.should == results_set
-          end
-        end
-
-        context "with no result" do
-
-          let(:query) { none_query }
-
-          it "returns 0" do
-
-            VCR.use_cassette('raw_xml_return_no_results') do
-
-              results = GSA.search(query, {}, true)
-              results.should == GSA::NO_RESULTS
-            end
-          end
-        end
-      end
     end
   end
 
