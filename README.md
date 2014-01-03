@@ -7,6 +7,14 @@ Quickly and easily harness GSA indexing power with one-line feeding, searching, 
 gem install gsa
 ```
 
+## Default Port
+the default port is set to the secure port 19902
+
+to change the port to http, set the feed extension to the following:
+```ruby
+GSA::FEED_EXTENSION = ":19900/xmlfeed"
+```
+
 ## Getting Started
 Set the base uri to your GSA box
 ```ruby
