@@ -3,7 +3,7 @@ module Defaults
   NO_URI_TEXT            = "base_uri not set"
 
   # feed extension
-  FEED_EXTENSION         = ":19900/xmlfeed"
+  FEED_EXTENSION         = ":19902/xmlfeed"
   
   # feed actions
   ADD_ACTION             = "add"
