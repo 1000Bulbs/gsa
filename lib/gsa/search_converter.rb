@@ -2,6 +2,7 @@ module GSA
   class SearchConverter
 
     def self.convert(convertable)
+
       results     = GSA::ReadableResults.extract(convertable)
 
       result_sets = GSA::ReadableResultSets.extract(results)

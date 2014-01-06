@@ -2,6 +2,8 @@ module GSA
   class ReadableMetatags < ReadableResults
 
     def self.parse(metatags)
+      puts metatags.inspect
+      exit
       parse_core(metatags) {|meta_pair| convert(meta_pair) }
     end
 
