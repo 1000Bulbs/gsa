@@ -306,4 +306,81 @@ http_interactions:
         HZTw2XbcqLxfO/6whr2NlQ0NX33B3wL/3S8tvbsqWQwAAA==
     http_version: 
   recorded_at: Thu, 10 Oct 2013 13:38:28 GMT
-recorded_with: VCR 2.6.0
+- request:
+    method: get
+    uri: https://dev-gsa.1000bulbs.com/search?client=default_frontend&filter=0&getfields=*&num=1000&output=xml_no_dtd&q=red%20christmas%20lights&requiredfields=attribute_color:Red.attribute_brand:Vickerman&site=default_collection&sort=relevance&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Jan 2014 19:11:42 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1416'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        2VAYk/5U/A2mY/fVP3Few18OFQAA
+    http_version: 
+  recorded_at: Mon, 06 Jan 2014 19:12:09 GMT
+recorded_with: VCR 2.5.0

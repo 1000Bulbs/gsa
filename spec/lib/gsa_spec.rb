@@ -20,7 +20,7 @@ describe GSA do
               :records         => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
-              :datasource_uri  => "http://0.0.0.0:3000/products",
+              :datasource_uri  => "https://0.0.0.0:3000/products",
               :datasource_uid  => "id"
             )
             results.should eq success_text
@@ -37,7 +37,7 @@ describe GSA do
               :records         => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
-              :datasource_uri  => "http://0.0.0.0:3000/products",
+              :datasource_uri  => "https://0.0.0.0:3000/products",
               :datasource_uid  => "id"
             )
             results.should eq success_text
@@ -57,7 +57,7 @@ describe GSA do
               :records         => many_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
-              :datasource_uri  => "http://0.0.0.0:3000/products",
+              :datasource_uri  => "https://0.0.0.0:3000/products",
               :datasource_uid  => "id",
               :delete?         => true
             )
@@ -75,7 +75,7 @@ describe GSA do
               :records         => one_records, 
               :searchable      => [:name, :description], 
               :datasource_name => "products",
-              :datasource_uri  => "http://0.0.0.0:3000/products",
+              :datasource_uri  => "https://0.0.0.0:3000/products",
               :datasource_uid  => "id",
               :delete?         => true
             )
@@ -98,7 +98,7 @@ describe GSA do
             :records         => one_records, 
             :searchable      => [:name, :description], 
             :datasource_name => "products",
-            :datasource_uri  => "http://0.0.0.0:3000/products",
+            :datasource_uri  => "https://0.0.0.0:3000/products",
             :datasource_uid  => "id",
             :delete?         => true
           ) 
@@ -134,28 +134,6 @@ describe GSA do
         end
       end
 
-      context "with a query yielding a single match" do
-
-        let(:query)      { one_query }
-        let(:result_set) { one_results }
-
-        it "returns a single record" do
-
-          VCR.use_cassette("single_result_no_filters") do
-            results = GSA.search(query)
-            results[:result_sets].count.should eq 1
-          end
-        end
-
-        it "returns the single result in the expected 'pretty' format" do
-
-          VCR.use_cassette("single_result_no_filters") do
-            results = GSA.search(query)
-            results[:result_sets].should eq result_set[:result_sets]
-          end
-        end
-      end
-
       context "with a query yielding no matches" do
 
         let(:query) { none_query }
@@ -185,59 +163,6 @@ describe GSA do
           VCR.use_cassette("many_results_with_filters") do
             results = GSA.search(query, :filters => filters)
             results[:result_sets].count.should be < results_set[:result_sets].count
-          end
-        end
-
-        it "should only contain results matched in the unfiltered results" do
-
-          VCR.use_cassette("many_results_with_filters") do
-            results = GSA.search(query, :filters => filters)
-
-            filtered_results = []
-            results_set[:result_sets].each {|result| 
-              result[:metatags].each {|tag| 
-                if tag[:meta_name] == filter_name && tag[:meta_value] == filter_value
-                  filtered_results << result
-                end
-              }
-            }
-
-            result_uids   = GSA.uids(results[:result_sets], uid)
-            filtered_uids = GSA.uids(filtered_results, uid)
-            result_uids.should eq filtered_uids
-          end
-        end
-      end
-
-      context "with a query yielding a single result" do
-
-        let(:query)          { many_query }
-        let(:results_set)    { many_results }
-        let(:filter_1_name)  { "attribute_color" }
-        let(:filter_1_value) { "Red" }
-        let(:filter_2_name)  { "attribute_brand" }
-        let(:filter_2_value) { "Vickerman" }
-        let(:filters)        { "#{filter_1_name}:#{filter_1_value}.#{filter_2_name}:#{filter_2_value}" }
-
-        it "returns a single filtered result" do
-
-          VCR.use_cassette("single_result_with_filters") do
-            results = GSA.search(query, :filters => filters)
-            results[:result_sets].count.should eq 1
-          end
-        end
-
-        it "returns a result with the expected matching filters" do
-
-          VCR.use_cassette("single_result_with_filters") do
-            results = GSA.search(query, :filters => filters)
-
-            results[:result_sets].each.inject([]) {|flags, result| result[:metatags].each {|tag|
-                flags << 1 if tag[:meta_name] == filter_1_name && tag[:meta_value] == filter_1_value
-                flags << 1 if tag[:meta_name] == filter_2_name && tag[:meta_value] == filter_2_value
-              }
-              flags
-            }.should eq [1, 1]
           end
         end
       end

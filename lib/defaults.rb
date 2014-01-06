@@ -21,6 +21,7 @@ module Defaults
   DEFAULT_OUTPUT         = "xml_no_dtd"  # OPTIONS: xml_no_dtd, xml
   DEFAULT_START          = "0"           # OPTIONS: 0..max_search_results
   DEFAULT_CLIENT         = "default_frontend"
+  DEFAULT_COLLECTION     = "default_collection" # maps to 'site'
   NO_RESULTS             = 0
 
   # values for making xml files

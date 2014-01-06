@@ -60,7 +60,7 @@ module Fixtures
   end
 
   def gsa_base_uri
-    "http://dev-gsa.1000bulbs.com"
+    "https://dev-gsa.1000bulbs.com"
   end
 
   #######

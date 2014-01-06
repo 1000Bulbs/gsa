@@ -108,4 +108,58 @@ http_interactions:
         u+PRB2KzMrwgBAAA
     http_version: 
   recorded_at: Thu, 10 Oct 2013 13:40:02 GMT
-recorded_with: VCR 2.6.0
+- request:
+    method: get
+    uri: https://dev-gsa.1000bulbs.com/search?client=default_frontend&filter=0&getfields=*&num=1000&output=xml_no_dtd&q=red%20christmas%20lights&requiredfields=brand:FooBar&site=default_collection&sort=relevance&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Jan 2014 19:12:42 GMT
+      Server:
+      - Google Search Appliance
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=ISO-8859-1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '391'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI2UXWuDMBSG7/crQi5b6kelrB1q6WAduyjr13YrmUYbiEmb
+        xLKfv7APdTnCBl6YnPd9jr45Gi/fa46uVGkmRYJDL8CIilwWTFQJfjo8T+bz
+        2WISYqQNEQXhUtAEC4mX6U38eNii14d9giNviu36uEkjLwij6HYR+3YR71JF
+        C5SfFNOmJhpxVp2Mjv2dFW9X+9UGCVJb3gWjK+GNvRvSYyQVq5ggPOtU41Y1
+        /lb5DrRk3FDVkgOICYBHM0NbR0FL0nCT5ZJzmhsbEEQMaFxmRU3JKC90Cx5B
+        zgg+ilSmFwunVyJyOpTFT8kliKZuAWEQDATwuQsaG9Lr/K/YZGPOTeexI5UJ
+        mRWmgOZezaXknFFhQPylksJQMcACCpeo6KVhdlic/N+UHeW7tZT3REHqr6pL
+        ZN14vBzXkzm0f227voYTUbVW6IKNzr2z86b2mkXebDF0hr2qSyF5TnX34mdo
+        PwOPPYNL99lE0BINW+q/Z8a3f4z05gMR0haVdAQAAA==
+    http_version: 
+  recorded_at: Mon, 06 Jan 2014 19:13:09 GMT
+recorded_with: VCR 2.5.0
