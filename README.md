@@ -162,6 +162,11 @@ Optional Parameters:
 >* Determines which Front End you want to search against
 >* Default value: 'default_frontend'
 
+:collection
+>* Maps to GSA 'site' parameter
+>* Determines which collection you want to search against
+>* Default value: 'default_collection'
+
 ## Faceting
 
 To leverage faceting, you need to enable Dynamic Navigation and
