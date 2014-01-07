@@ -10,16 +10,13 @@ module GSA
     end
 
     def self.convert(set)
-      converted = {
+      {
         :result_number         => set[GSA::RESULT_NUMBER], 
         :url                   => set[GSA::URL],
         :title                 => set[GSA::TITLE],
+        :metatags              => GSA::ReadableMetatags.parse(set[GSA::METATAGS]),
         :search_result_snippet => set[GSA::SEARCH_RESULT_SNIPPET]
       } 
-      if set.has_key?([GSA::METATAGS])
-        converted[:metatags] = GSA::ReadableMetatags.parse(set[GSA::METATAGS])
-      end
-      converted
     end
   end
 end
