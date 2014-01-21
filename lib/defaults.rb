@@ -4,7 +4,7 @@ module Defaults
 
   # feed extension
   FEED_EXTENSION         = ":19902/xmlfeed"
-  
+
   # feed actions
   ADD_ACTION             = "add"
   DELETE_ACTION          = "delete"
