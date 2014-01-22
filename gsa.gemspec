@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.homepage      = 'https://github.com/1000Bulbs/gsa'
   spec.license       = 'MIT'
-  
+
   spec.files         = `git ls-files`.split($/)
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
@@ -37,5 +37,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'rest-client', '~> 1.6.7'
   spec.add_runtime_dependency 'activesupport', '~> 4.0.0'
   spec.add_runtime_dependency 'json', '~> 1.8.0'
-  spec.add_runtime_dependency 'libxml-ruby', '~> 2.7.0'
+  spec.add_runtime_dependency 'nokogiri', '> 1.5.0'
 end
