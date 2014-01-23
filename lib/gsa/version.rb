@@ -1,3 +1,3 @@
 module GSA
-  VERSION = "0.10.2"
+  VERSION = "0.11.2"
 end
