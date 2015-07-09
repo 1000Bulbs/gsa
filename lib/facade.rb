@@ -5,9 +5,14 @@ module Facade
   end
 
   def search(query, filters={})
-    raw_results = search_gsa_index(query, filters)
+    check_base_uri
+    raw_results = GSA::Searcher.search(query, filters)
     return raw_results if raw_results == GSA::NO_RESULTS
-    beautify_search_results(raw_results)
+    if filters[:embedded]
+      raw_results
+    else
+      beautify_search_results(raw_results)
+    end
   end
 
   def uids(pretty_search_results, uid)
@@ -22,12 +27,8 @@ module Facade
     end
   end
 
-  def search_gsa_index(query, filters={})
-    if GSA.base_uri
-      GSA::Searcher.search(query, filters)
-    else
-      raise GSA::URINotSetError, GSA::NO_URI_TEXT
-    end
+  def check_base_uri
+    raise GSA::URINotSetError, GSA::NO_URI_TEXT unless GSA.base_uri
   end
 
   def beautify_search_results(search_results)
