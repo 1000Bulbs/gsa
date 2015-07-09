@@ -14,9 +14,9 @@ Gem::Specification.new do |spec|
   }
 
   spec.description   = %q{
-  Harness GSA indexing power easily and immediately with one-line feeding, 
-  searching, and faceting. This gem is tailored for the use in commerce 
-  and other such uses outside the scope of the out-of-the-box GSA 
+  Harness GSA indexing power easily and immediately with one-line feeding,
+  searching, and faceting. This gem is tailored for the use in commerce
+  and other such uses outside the scope of the out-of-the-box GSA
   "internal search".
   }
 
@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 2.13.0'
 
   spec.add_runtime_dependency 'rest-client', '~> 1.6.7'
-  spec.add_runtime_dependency 'activesupport', '~> 4.0.0'
+  spec.add_runtime_dependency 'activesupport', '> 4.0.0'
   spec.add_runtime_dependency 'json', '~> 1.8.0'
   spec.add_runtime_dependency 'nokogiri', '> 1.5.0'
 end
