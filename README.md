@@ -25,21 +25,21 @@ GSA.base_uri = 'http://path-to-gsa-box.com/'
 
 1.) Structure the records you wish to feed to the GSA as an array of hashes
 ```ruby
-@products = [ 
-{ :id => "1", :name => "Foo", :price => 12, :brand => 'BazBrand' },
-{ :id => "2", :name => "Bar", :price => 15, :brand => 'BazBrand' }
+@products = [
+{ id: "1", name: "Foo", price: 12, brand: 'BazBrand' },
+{ id: "2", name: "Bar", price: 15, brand: 'BazBrand' }
 ]
 ```
 
 2.) Feed the records to the GSA
 ```ruby
 GSA.feed(
-  :records         => @products,
-  :searchable      => [:name, :price],
-  :datasource_name => "Baz",
-  :datasource_uri  => "http://your-app-base-url/products",
-  :datasource_uid  => "id",
-  :delete?         => false
+  records:          @products,
+  searchable:       [:name, :price],
+  datasource_name:  "Baz",
+  datasource_uri:   "http://your-app-base-url/products",
+  datasource_uid:   "id",
+  delete?:          false
 )
 ```
 
@@ -91,7 +91,7 @@ To filter results using GSA filters, pass in an optional 'filters' key-value pai
 # gets all search results for 'Foo' where the price is '12'
 query   = "Foo"
 filters = "price:12"
-GSA.search( query, :filters => filters)
+GSA.search( query, filters: filters)
 ```
 
 Multiple filters can be passed in using a '.' in-between filters:

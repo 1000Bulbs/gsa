@@ -11,12 +11,12 @@ module GSA
 
     def self.convert(set)
       {
-        :result_number         => set[GSA::RESULT_NUMBER], 
-        :url                   => set[GSA::URL],
-        :title                 => set[GSA::TITLE],
-        :metatags              => GSA::ReadableMetatags.parse(set[GSA::METATAGS]),
-        :search_result_snippet => set[GSA::SEARCH_RESULT_SNIPPET]
-      } 
+        result_number:         set[GSA::RESULT_NUMBER],
+        url:                   set[GSA::URL],
+        title:                 set[GSA::TITLE],
+        metatags:              GSA::ReadableMetatags.parse(set[GSA::METATAGS]),
+        search_result_snippet: set[GSA::SEARCH_RESULT_SNIPPET]
+      }
     end
   end
 end

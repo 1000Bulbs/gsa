@@ -7,8 +7,8 @@ module GSA
 
     def self.convert(meta_pair)
       {
-        :meta_name => meta_pair[GSA::META_NAME], 
-        :meta_value => meta_pair[GSA::META_VALUE]
+        meta_name:  meta_pair[GSA::META_NAME],
+        meta_value: meta_pair[GSA::META_VALUE]
       }
     end
   end

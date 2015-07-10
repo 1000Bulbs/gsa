@@ -17,8 +17,8 @@ describe GSA do
 
           VCR.use_cassette("many_records") do
             results = GSA.feed(
-              :records         => many_records, 
-              :searchable      => [:name, :description], 
+              :records         => many_records,
+              :searchable      => [:name, :description],
               :datasource_name => "products",
               :datasource_uri  => "https://0.0.0.0:3000/products",
               :datasource_uid  => "id"
@@ -34,8 +34,8 @@ describe GSA do
 
           VCR.use_cassette("single_record") do
             results = GSA.feed(
-              :records         => many_records, 
-              :searchable      => [:name, :description], 
+              :records         => many_records,
+              :searchable      => [:name, :description],
               :datasource_name => "products",
               :datasource_uri  => "https://0.0.0.0:3000/products",
               :datasource_uid  => "id"
@@ -54,8 +54,8 @@ describe GSA do
 
           VCR.use_cassette("delete_many_records") do
             results = GSA.feed(
-              :records         => many_records, 
-              :searchable      => [:name, :description], 
+              :records         => many_records,
+              :searchable      => [:name, :description],
               :datasource_name => "products",
               :datasource_uri  => "https://0.0.0.0:3000/products",
               :datasource_uid  => "id",
@@ -72,8 +72,8 @@ describe GSA do
 
           VCR.use_cassette("delete_single_record") do
             results = GSA.feed(
-              :records         => one_records, 
-              :searchable      => [:name, :description], 
+              :records         => one_records,
+              :searchable      => [:name, :description],
               :datasource_name => "products",
               :datasource_uri  => "https://0.0.0.0:3000/products",
               :datasource_uid  => "id",
@@ -92,17 +92,17 @@ describe GSA do
       end
 
       it "raises an error" do
-        expect { 
+        expect {
 
           GSA.feed(
-            :records         => one_records, 
-            :searchable      => [:name, :description], 
+            :records         => one_records,
+            :searchable      => [:name, :description],
             :datasource_name => "products",
             :datasource_uri  => "https://0.0.0.0:3000/products",
             :datasource_uid  => "id",
             :delete?         => true
-          ) 
-          
+          )
+
         }.to raise_error GSA::URINotSetError
       end
     end
@@ -161,7 +161,7 @@ describe GSA do
         it "returns less than the unfiltered results" do
 
           VCR.use_cassette("many_results_with_filters") do
-            results = GSA.search(query, :filters => filters)
+            results = GSA.search(query, filters: filters)
             results[:result_sets].count.should be < results_set[:result_sets].count
           end
         end
@@ -175,7 +175,7 @@ describe GSA do
         it "returns the no record flag" do
 
           VCR.use_cassette("no_result_with_filters") do
-            results = GSA.search(query, :filters => filters)
+            results = GSA.search(query, filters: filters)
             results.should eq GSA::NO_RESULTS
           end
         end
@@ -192,9 +192,9 @@ describe GSA do
 
         it "raises an error" do
 
-          expect { 
+          expect {
 
-            GSA.search(query, :filters => filters) 
+            GSA.search(query, filters: filters)
 
           }.to raise_error GSA::URINotSetError
         end
