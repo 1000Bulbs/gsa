@@ -25,21 +25,21 @@ GSA.base_uri = 'http://path-to-gsa-box.com/'
 
 1.) Structure the records you wish to feed to the GSA as an array of hashes
 ```ruby
-@products = [ 
-{ :id => "1", :name => "Foo", :price => 12, :brand => 'BazBrand' },
-{ :id => "2", :name => "Bar", :price => 15, :brand => 'BazBrand' }
+@products = [
+{ id: "1", name: "Foo", price: 12, brand: 'BazBrand' },
+{ id: "2", name: "Bar", price: 15, brand: 'BazBrand' }
 ]
 ```
 
 2.) Feed the records to the GSA
 ```ruby
 GSA.feed(
-  :records         => @products,
-  :searchable      => [:name, :price],
-  :datasource_name => "Baz",
-  :datasource_uri  => "http://your-app-base-url/products",
-  :datasource_uid  => "id",
-  :delete?         => false
+  records:          @products,
+  searchable:       [:name, :price],
+  datasource_name:  "Baz",
+  datasource_uri:   "http://your-app-base-url/products",
+  datasource_uid:   "id",
+  delete?:          false
 )
 ```
 
@@ -91,7 +91,7 @@ To filter results using GSA filters, pass in an optional 'filters' key-value pai
 # gets all search results for 'Foo' where the price is '12'
 query   = "Foo"
 filters = "price:12"
-GSA.search( query, :filters => filters)
+GSA.search( query, filters: filters)
 ```
 
 Multiple filters can be passed in using a '.' in-between filters:
@@ -103,7 +103,12 @@ filters = "price:12.name:Foo"
 Multiple key-value pairs can be passed in as optional parameters to override defaults:
 
 ```ruby
-GSA.search( query, :filters => filters, :num => 100, :sort => 'relevance', :output => 'xml')
+GSA.search( query, filters: filters, num: 100, sort: 'relevance', output: 'xml')
+```
+
+You can also do an embedded request, which means that you receive the search results in HTML. By setting the proxystylesheet parameter you define which stylesheet is used to style the results. You can set this up in your GSA.
+```ruby
+GSA.search( query, embedded: true, proxystylesheet: "default_frontend")
 ```
 
 ### Search Parameters
@@ -167,12 +172,54 @@ Optional Parameters:
 >* Determines which collection you want to search against
 >* Default value: 'default_collection'
 
+:proxystylesheet
+>* Maps to the GSA 'proxystylesheet' parameter
+>* Determines which frontend styling you want to style your embedded results with
+>* If the value of the output parameter is xml_no_dtd, the output format is modified by the proxystylesheet value
+>* Example: 'default_frontend'
+
+:proxyreload
+>* Maps to the GSA 'proxyreload' parameter
+>* Instructs the Google Search Appliance when to refresh the XSL stylesheet cache
+>* Default: '0'
+>* NOTE: Set this to 1 if you change the stylesheet in your GSA, this should be an environment variable so you can refresh the stylesheet without deploying new code. Setting this to 1 by default is not advised since it will slow down your application.
+
+:emmain
+>* Maps to the GSA 'emmain' parameter
+>* Incoming query parameter identifying root path prefix to be used for links that should refresh the main page.
+>* Example: 'search/'
+
+:emsingleres
+>* Maps to the GSA 'emsingleres' parameter
+>* Incoming query parameter identifying root path prefix to be used for resources that should be loaded in isolation
+>* Example: 'search/'
+
+:emdstyle
+>* Maps to the GSA 'emdstyle' parameter
+>* Incoming query parameter for enabling/disabling style for embedded mode, either true or false.
+>* Example: 'true'
+
+:entqr
+>* Maps to the GSA 'entqr' parameter
+>* This parameter sets the query expansion policy
+>* Default: '0'
+
+:entsp
+>* Maps to the GSA 'entsp' parameter
+>* The entsp parameter controls the use of the advanced relevance scoring parameters that you set under Result Biasing on the Admin Console. (XXX is name rule)
+>* Default: '0'
+
+:tlen
+>* Maps to the GSA 'tlen' parameter
+>* Specifies the number of bytes that would be used to return the search results title.
+>* Default: '70'
+
 ## Faceting
 
 To leverage faceting, you need to enable Dynamic Navigation and
-configure a Front End on your GSA box. 
+configure a Front End on your GSA box.
 
-[Read more information here.](https://developers.google.com/search-appliance/documentation/68/help_gsa/serve_dynamic_navigation)
+[Read more information here.](https://www.google.com/support/enterprise/static/gsa/docs/admin/72/admin_console_help/serve_dynamic_navigation.html)
 
 ## Copyright
 Copyright (c) 2013 1000Bulbs.com.

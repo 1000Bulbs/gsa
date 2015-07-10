@@ -25,11 +25,11 @@ module GSA
       xml(
         block(:gsafeed,
               block(:header,
-                    block(:datasource, datasource_name) << 
+                    block(:datasource, datasource_name) <<
                     block(:feedtype, GSA::FEED_TYPE)
               ) <<
-              block(:group, 
-                record_blocks(records, searchable, datasource_uri, datasource_uid), 
+              block(:group,
+                record_blocks(records, searchable, datasource_uri, datasource_uid),
                 {:action => action}
               )
         )

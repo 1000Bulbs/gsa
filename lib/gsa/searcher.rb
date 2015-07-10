@@ -6,7 +6,7 @@ module GSA
     ]
 
     def self.search(query, args = {})
-      query           = clean_query(query)
+      query                  = clean_query(query)
       args[:site]            = args[:collection] || GSA::DEFAULT_COLLECTION
       args[:requiredfields]  = args[:filters] || nil
 
@@ -17,6 +17,7 @@ module GSA
           value = args[field] || GSA.send("DEFAULT_#{field.capitalize}")
           search = "#{search}&#{field.to_s}=#{value}"
         rescue NoMethodError
+          # The argument was not set, no worries.
         end
       end
 
